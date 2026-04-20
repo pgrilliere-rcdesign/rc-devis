@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="RC Devis">
+<meta name="theme-color" content="#B8963E">
+<title></title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --or: #B8963E;
+  --or-light: #E8D5A8;
+  --or-dark: #8A6E28;
+  --cream: #FAF8F5;
+  --parchment: #F4F0E8;
+  --charcoal: #2C2C2C;
+  --charcoal-light: #555;
+  --muted: #888;
+  --border: #E0D8C8;
+  --white: #FFFFFF;
+  --radius: 6px;
+}
+
+html { font-size: 16px; }
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: var(--charcoal);
+  background: var(--cream);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5 { font-family: 'Cormorant Garamond', serif; }
+
+/* ── Login ── */
+#login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+}
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 1rem;
+}
+.login-logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  border-radius: 16px;
+  background: var(--charcoal);
+  padding: 16px;
+}
+.login-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--charcoal);
+  margin-bottom: 0.25rem;
+}
+.login-sub {
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.login-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.login-label { font-size: 0.8rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; display: block; }
+.login-input-wrap { position: relative; }
+.login-input-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--muted); }
+.login-input {
+  width: 100%;
+  padding: 0.65rem 0.75rem 0.65rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  background: var(--cream);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.login-input:focus { border-color: var(--or); }
+.login-input.error { border-color: #C0392B; }
+.login-error { font-size: 0.75rem; color: #C0392B; margin-top: 0.4rem; }
+.btn-login {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  background: var(--or);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-login:hover { opacity: 0.88; }
+.login-footer { text-align: center; font-size: 0.72rem; color: var(--muted); margin-top: 1.25rem; }
+
+/* ── App ── */
+#app { display: none; }
+#app.visible { display: block; }
+
+/* ── Header ── */
+.app-header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo-wrap { display: flex; align-items: center; gap: 0.75rem; }
+.header-logo {
+  width: 38px; height: 38px;
+  object-fit: contain;
+  background: var(--charcoal);
+  border-radius: 8px;
+  padding: 5px;
+}
+.header-title { font-size: 1.15rem; font-weight: 600; line-height: 1; color: var(--charcoal); }
+.header-sub { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+.header-actions { display: flex; gap: 0.5rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.9rem; border-radius: var(--radius); font-family: 'Lato', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; border: 1px solid var(--border); background: white; color: var(--charcoal); transition: all 0.15s; }
+.btn:hover { border-color: var(--or); color: var(--or); }
+.btn-primary { background: var(--or); color: white; border-color: var(--or); }
+.btn-primary:hover { opacity: 0.88; color: white; }
+.btn svg { width: 14px; height: 14px; }
+
+/* ── Main Layout ── */
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .main-container { grid-template-columns: 1fr; }
+}
+
+/* ── Sections formulaire ── */
+.form-col { display: flex; flex-direction: column; gap: 0.75rem; }
+.section-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  background: white;
+}
+.section-header:hover { background: var(--cream); }
+.section-title-wrap { display: flex; align-items: center; gap: 0.6rem; }
+.section-title { font-size: 1.05rem; font-weight: 600; color: var(--charcoal); }
+.badge {
+  font-size: 0.65rem; font-family: 'Lato', sans-serif;
+  padding: 0.15rem 0.5rem; border-radius: 20px;
+  background: var(--parchment); color: var(--or-dark);
+  border: 1px solid var(--or-light); font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.section-chevron { width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }
+.section-chevron.open { transform: rotate(180deg); }
+.gold-divider { height: 1px; background: linear-gradient(to right, transparent, var(--or), transparent); margin: 0; }
+.section-body { padding: 1rem 1.25rem 1.25rem; display: none; }
+.section-body.open { display: block; }
+
+/* ── Form elements ── */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+.form-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.form-input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  background: var(--cream);
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+.form-input:focus { border-color: var(--or); background: white; }
+select.form-input { cursor: pointer; }
+
+/* ── Type buttons ── */
+.type-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.6rem; margin-bottom: 1rem; }
+.type-btn {
+  padding: 0.65rem 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.type-btn:hover { border-color: var(--or-light); }
+.type-btn.active { border-color: var(--or); background: var(--parchment); }
+.type-btn-label { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 600; color: var(--charcoal); }
+.type-btn-sub { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+
+/* ── Checkbox rows ── */
+.checkbox-row {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.checkbox-row:hover { border-color: var(--or-light); }
+.checkbox-row input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--or); cursor: pointer; flex-shrink: 0; }
+.checkbox-label { flex: 1; }
+.checkbox-label strong { font-size: 0.85rem; font-weight: 700; display: block; }
+.checkbox-label span { font-size: 0.75rem; color: var(--muted); }
+.checkbox-price { font-size: 0.82rem; font-weight: 700; color: var(--or); white-space: nowrap; }
+
+/* ── Counter ── */
+.counter-row {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  margin-bottom: 0.4rem;
+}
+.counter-label { flex: 1; }
+.counter-label strong { font-size: 0.85rem; font-weight: 700; display: block; }
+.counter-label span { font-size: 0.72rem; color: var(--muted); }
+.counter-controls { display: flex; align-items: center; gap: 0.5rem; }
+.counter-btn {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1px solid var(--border); background: white;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 1rem; color: var(--charcoal);
+  transition: all 0.12s;
+}
+.counter-btn:hover { border-color: var(--or); color: var(--or); }
+.counter-val { width: 24px; text-align: center; font-size: 0.9rem; font-weight: 700; }
+.counter-total { font-size: 0.82rem; font-weight: 700; color: var(--or); min-width: 56px; text-align: right; }
+
+/* ── Info box ── */
+.info-box {
+  background: var(--parchment);
+  border: 1px solid var(--or-light);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.75rem;
+  color: var(--charcoal-light);
+  margin-top: 0.5rem;
+}
+
+/* ── Sticky recap ── */
+.recap-col { }
+.recap-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: sticky;
+  top: 72px;
+}
+.recap-header {
+  background: var(--charcoal);
+  padding: 1rem 1.25rem;
+  color: white;
+}
+.recap-header-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; display: flex; align-items: center; gap: 0.4rem; }
+.recap-header-title svg { width: 14px; height: 14px; }
+.recap-client { font-size: 0.95rem; font-weight: 700; margin-top: 0.3rem; }
+.recap-num { font-size: 0.72rem; opacity: 0.5; font-family: monospace; margin-top: 0.15rem; }
+.recap-lines { padding: 1rem 1.25rem; min-height: 100px; }
+.recap-empty { text-align: center; padding: 1.5rem 0; font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+.recap-line { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; }
+.recap-line-label { font-size: 0.8rem; font-weight: 700; flex: 1; line-height: 1.3; }
+.recap-line-note { font-size: 0.68rem; color: var(--muted); margin-top: 1px; }
+.recap-line-price { font-size: 0.82rem; font-weight: 700; color: var(--or); white-space: nowrap; }
+.recap-total-box { padding: 0 1.25rem 1.25rem; }
+.recap-subtotal-row { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+.recap-remise-row { display: flex; justify-content: space-between; font-size: 0.8rem; color: #C0392B; margin-bottom: 0.5rem; }
+.recap-total-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  background: var(--charcoal);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+}
+.recap-total-label { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: white; }
+.recap-total-amount { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--or-light); }
+.recap-tva { font-size: 0.68rem; color: var(--muted); text-align: right; margin-top: 0.4rem; }
+.recap-actions { padding: 0 1.25rem 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.recap-footer { text-align: center; font-size: 0.68rem; color: var(--muted); padding: 0.75rem 1.25rem; line-height: 1.6; border-top: 1px solid var(--border); }
+
+/* ── Agence sub-buttons ── */
+.agence-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.5rem; margin-bottom: 0.75rem; }
+
+/* ── Adresse intervention ── */
+.addr-intervention { margin-top: 0.75rem; padding: 0.75rem; background: var(--parchment); border-radius: var(--radius); border: 1px solid var(--or-light); }
+
+/* ── Section helper ── */
+.section-helper { font-size: 0.75rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.85rem; }
+
+/* ══════════════════════════════════════════════════════
+   IMPRESSION — Page 1 (Devis) + Page 2 (Fiches)
+══════════════════════════════════════════════════════ */
+@media print {
+  @page { margin: 1cm 1.4cm 1cm 1.4cm; size: A4; }
+  /* Chrome/Safari: masquer en-tête et pied de page navigateur */
+  @page { margin-top: 0.8cm; margin-bottom: 0.8cm; }
+
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  body { background: white; font-size: 9pt; }
+
+  #login-screen, .app-header, .form-col, .recap-col, .recap-actions { display: none !important; }
+
+  #print-area { display: block !important; }
+
+  /* ── Page 1 : Devis ── */
+  .print-page1 { page-break-after: always; }
+
+  .print-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid #B8963E;
+    margin-bottom: 0.9rem;
+  }
+  .print-logo {
+    width: 80px; height: 80px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+  .print-company { font-size: 7.5pt; color: #555; line-height: 1.55; margin-top: 0.4rem; }
+  .print-devis-title { font-family: 'Cormorant Garamond', serif; font-size: 22pt; font-weight: 600; color: #B8963E; text-align: right; }
+  .print-devis-meta { font-size: 7.5pt; color: #555; text-align: right; margin-top: 3px; line-height: 1.6; }
+
+  .print-client-block {
+    margin-bottom: 0.9rem;
+    padding: 0.5rem 0.85rem;
+    background: #FAF8F5 !important;
+    border-left: 3px solid #B8963E;
+    border-radius: 0 4px 4px 0;
+  }
+  .print-client-tag { font-size: 6.5pt; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 3px; }
+  .print-client-name { font-weight: 700; font-size: 9.5pt; }
+  .print-client-detail { font-size: 7.5pt; color: #555; margin-top: 2px; }
+
+  .print-table { width: 100%; border-collapse: collapse; margin-bottom: 0.75rem; }
+  .print-table thead tr { background: #2C2C2C !important; color: white !important; }
+  .print-table th { padding: 0.45rem 0.65rem; font-size: 6.5pt; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; text-align: left; }
+  .print-table th:last-child { text-align: right; width: 90px; }
+  .print-table tbody tr:nth-child(even) { background: #FAF8F5 !important; }
+  .print-table tbody tr:nth-child(odd) { background: white !important; }
+  .print-table td { padding: 0.4rem 0.65rem; border-bottom: 1px solid #EEE; vertical-align: top; }
+  .print-td-label { font-weight: 700; font-size: 8pt; }
+  .print-td-desc { font-size: 7pt; color: #888; margin-top: 2px; font-style: italic; }
+  .print-td-price { text-align: right; font-weight: 700; font-size: 8.5pt; color: #B8963E; white-space: nowrap; }
+
+  .print-total-wrap { display: flex; justify-content: flex-end; margin-bottom: 0.75rem; }
+  .print-total-inner { min-width: 220px; }
+  .print-subtotal-row, .print-remise-row {
+    display: flex; justify-content: space-between;
+    padding: 0.25rem 0; font-size: 7.5pt; color: #555;
+  }
+  .print-remise-row { color: #C0392B; }
+  .print-total-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.5rem 0.75rem;
+    background: #2C2C2C !important; color: white !important;
+    border-radius: 4px; margin-top: 4px;
+  }
+  .print-total-label { font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; }
+  .print-total-amount { font-family: 'Cormorant Garamond', serif; font-size: 14pt; font-weight: 700; color: #D4A843 !important; }
+  .print-tva { font-size: 6.5pt; color: #888; text-align: right; margin-top: 3px; }
+
+  .print-notes-box {
+    margin-bottom: 0.6rem; padding: 0.45rem 0.65rem;
+    background: #FAF8F5 !important; border: 1px solid #EEE; border-radius: 4px;
+  }
+  .print-notes-tag { font-size: 6pt; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 3px; }
+  .print-notes-text { font-size: 7.5pt; color: #555; }
+
+  .print-legal {
+    border-top: 1px solid #EEE; padding-top: 0.6rem;
+    font-size: 6.5pt; color: #888; line-height: 1.55;
+  }
+
+  /* ── Page 2 : Fiches descriptives ── */
+  .print-page2 { }
+  .print-page2-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 0.5rem; border-bottom: 2px solid #B8963E;
+    margin-bottom: 1rem;
+  }
+  .print-page2-title { font-family: 'Cormorant Garamond', serif; font-size: 16pt; font-weight: 600; color: #2C2C2C; }
+  .print-page2-sub { font-size: 7.5pt; color: #888; margin-top: 2px; }
+  .print-page2-devis { font-size: 7.5pt; color: #888; text-align: right; }
+
+  .fiches-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .fiche {
+    border: 1px solid #E0D8C8;
+    border-radius: 5px;
+    overflow: hidden;
+    break-inside: avoid;
+  }
+  .fiche-header {
+    background: #2C2C2C !important; color: white !important;
+    padding: 0.45rem 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .fiche-title { font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; flex: 1; }
+  .fiche-price { font-size: 8pt; color: #D4A843 !important; font-weight: 700; white-space: nowrap; }
+  .fiche-body { padding: 0.55rem 0.7rem; background: white !important; }
+  .fiche-desc { font-size: 7.5pt; color: #555; line-height: 1.55; margin-bottom: 0.4rem; }
+  .fiche-includes { list-style: none; }
+  .fiche-includes li { font-size: 7pt; color: #444; padding: 0.18rem 0; border-bottom: 1px solid #F5F5F5; display: flex; gap: 0.4rem; }
+  .fiche-includes li::before { content: "→"; color: #B8963E; flex-shrink: 0; font-weight: 700; }
+  .fiche-includes li:last-child { border-bottom: none; }
+  .fiche-duration { font-size: 6.5pt; color: #B8963E; font-weight: 700; margin-top: 0.4rem; letter-spacing: 0.04em; text-transform: uppercase; }
+}
+
+#print-area { display: none; }
+</style>
+</head>
+<body>
+
+<!-- ══ LOGIN ══ -->
+<div id="login-screen">
+  <div class="login-box">
+    <img class="login-logo" src="data:image/png;base64,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" alt="RC Design">
+    <h1 class="login-title">RC Design Intérieur</h1>
+    <p class="login-sub">Générateur de Devis</p>
+    <div class="login-card">
+      <label class="login-label" for="pwd-input">Mot de passe</label>
+      <div class="login-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <input id="pwd-input" class="login-input" type="password" placeholder="••••••••••••" autocomplete="current-password">
+      </div>
+      <div id="login-error" class="login-error" style="display:none">Mot de passe incorrect.</div>
+      <button class="btn-login" onclick="doLogin()">Accéder</button>
+    </div>
+    <p class="login-footer">Accès réservé · RC Design Intérieur · Côte d'Azur</p>
+  </div>
+</div>
+
+<!-- ══ APP ══ -->
+<div id="app">
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-logo-wrap">
+        <img class="header-logo" src="data:image/png;base64,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" alt="RC">
+        <div>
+          <div class="header-title">RC Design Intérieur</div>
+          <div class="header-sub">Générateur de Devis · V7</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn" onclick="resetDevis()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          Nouveau
+        </button>
+        <button class="btn btn-primary" onclick="handlePrint()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimer / PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- ── Formulaire ── -->
+    <div class="form-col">
+
+      <!-- Section : Informations devis -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Informations du devis</h3></div>
+          <svg class="section-chevron open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body open">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">N° de devis</label>
+              <input class="form-input" id="devis-num" type="text" oninput="renderRecap()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input class="form-input" id="devis-date" type="date" oninput="renderRecap()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Client -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Informations client</h3></div>
+          <svg class="section-chevron open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body open">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Nom / Société *</label>
+              <input class="form-input" id="client-nom" type="text" placeholder="M. Dupont" oninput="renderRecap()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" id="client-email" type="email" placeholder="contact@exemple.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone</label>
+              <input class="form-input" id="client-tel" type="tel" placeholder="06 00 00 00 00">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Adresse de facturation</label>
+              <input class="form-input" id="client-adresse" type="text" placeholder="12 avenue de la Mer, Antibes">
+            </div>
+          </div>
+          <div class="checkbox-row" style="margin-top:0.75rem" onclick="toggleAdresse()">
+            <input type="checkbox" id="meme-adresse" checked onchange="toggleAdresse()">
+            <div class="checkbox-label">
+              <strong>Adresse d'intervention identique à la facturation</strong>
+            </div>
+          </div>
+          <div id="addr-intervention-wrap" style="display:none" class="addr-intervention">
+            <div class="form-group">
+              <label class="form-label">Adresse d'intervention</label>
+              <input class="form-input" id="client-intervention" type="text" placeholder="5 rue du Port, Cannes">
+              <span style="font-size:0.72rem;color:var(--muted);margin-top:3px">Adresse exacte du bien ou du chantier concerné</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Type client & Formule -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Type de client & Formule de base</h3></div>
+          <svg class="section-chevron open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body open">
+          <div class="type-grid">
+            <button class="type-btn" onclick="setTypeClient('proprietaire')" id="btn-proprietaire">
+              <div class="type-btn-label">Propriétaire</div>
+              <div class="type-btn-sub">Particuliers · Résidentiel</div>
+            </button>
+            <button class="type-btn" onclick="setTypeClient('professionnel')" id="btn-professionnel">
+              <div class="type-btn-label">Professionnel</div>
+              <div class="type-btn-sub">Commerces · Hôtels · Bureaux</div>
+            </button>
+            <button class="type-btn" onclick="setTypeClient('agence')" id="btn-agence">
+              <div class="type-btn-label">Agence Immo</div>
+              <div class="type-btn-sub">Remise partenaire</div>
+            </button>
+          </div>
+
+          <!-- Propriétaire -->
+          <div id="sub-proprietaire" style="display:none">
+            <div class="form-group">
+              <label class="form-label">Formule</label>
+              <select class="form-input" id="formule-prop" onchange="renderRecap()">
+                <option value="">Sélectionner la surface du bien…</option>
+                <option value="studio">Studio / T2 (20–40 m²) — 990 €</option>
+                <option value="t3t4">T3 / T4 (60–100 m²) — 1 490 €</option>
+                <option value="duplex">Appartement / Duplex (100–150 m²) — 1 890 €</option>
+                <option value="villa">Villa (150–250 m²) — 2 490 €</option>
+                <option value="prestige">Villa Prestige (> 250 m²) — 2 990 €</option>
+              </select>
+            </div>
+            <div class="checkbox-row" style="margin-top:0.6rem">
+              <input type="checkbox" id="sketchup" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Élévation 3D SketchUp</strong>
+                <span>Fichier .SKP exploitable · +30% du tarif de base</span>
+              </div>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="express" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Option Express — Délai 2 jours</strong>
+                <span>+30% du tarif de base</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professionnel -->
+          <div id="sub-professionnel" style="display:none">
+            <div class="form-group">
+              <label class="form-label">Formule</label>
+              <select class="form-input" id="formule-prof" onchange="renderRecap()">
+                <option value="">Sélectionner le type de local…</option>
+                <option value="petit">Petit local / cabinet (40–100 m²) — 1 490 €</option>
+                <option value="commerce">Commerce / restaurant (100–200 m²) — 2 190 €</option>
+                <option value="grand">Grand espace / bureaux (200–400 m²) — 3 490 €</option>
+                <option value="hotel">Hôtel / Multi-niveaux (> 400 m²) — Sur devis</option>
+              </select>
+            </div>
+            <div class="checkbox-row" style="margin-top:0.6rem">
+              <input type="checkbox" id="sketchup-prof" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Élévation 3D SketchUp</strong>
+                <span>Fichier .SKP exploitable · +30% du tarif de base</span>
+              </div>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="express-prof" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Option Express — Délai 2 jours</strong>
+                <span>+30% du tarif de base</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agence -->
+          <div id="sub-agence" style="display:none">
+            <label class="form-label" style="margin-bottom:0.4rem">Formule partenaire</label>
+            <div class="agence-grid">
+              <button class="type-btn" onclick="setAgenceFormule('essai')" id="btn-ag-essai">
+                <div class="type-btn-label">Essai</div>
+                <div class="type-btn-sub">1 bien · −10%</div>
+              </button>
+              <button class="type-btn" onclick="setAgenceFormule('partenaire')" id="btn-ag-partenaire">
+                <div class="type-btn-label">Partenaire</div>
+                <div class="type-btn-sub">2–4 biens/mois · −15%</div>
+              </button>
+              <button class="type-btn" onclick="setAgenceFormule('premium')" id="btn-ag-premium">
+                <div class="type-btn-label">Premium</div>
+                <div class="type-btn-sub">5+ biens/mois · −20%</div>
+              </button>
+            </div>
+            <div class="form-group" style="margin-top:0.5rem">
+              <label class="form-label">Type de bien</label>
+              <select class="form-input" id="formule-agence-bien" onchange="renderRecap()">
+                <option value="">Sélectionner la surface du bien…</option>
+                <option value="studio">Studio / T2 (20–40 m²) — 990 €</option>
+                <option value="t3t4">T3 / T4 (60–100 m²) — 1 490 €</option>
+                <option value="duplex">Appartement / Duplex (100–150 m²) — 1 890 €</option>
+                <option value="villa">Villa (150–250 m²) — 2 490 €</option>
+                <option value="prestige">Villa Prestige (> 250 m²) — 2 990 €</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Options extérieures -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Options extérieures</h3></div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <div class="checkbox-row">
+            <input type="checkbox" id="pack-ext" onchange="togglePackExt()">
+            <div class="checkbox-label">
+              <strong>Pack Extérieur Complet</strong>
+              <span>Scan ext. + jardin (≤ 300 m²) + piscine/spa · Économie 280 €</span>
+            </div>
+            <span class="checkbox-price">+1 790 €</span>
+          </div>
+          <div id="options-ext-detail">
+            <div class="checkbox-row">
+              <input type="checkbox" id="scan-ext" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Scan Extérieur</strong>
+                <span>Terrasse · véranda · cour intérieure</span>
+              </div>
+              <span class="checkbox-price">+490 €</span>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="jardin" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Jardin — Modélisation 3D (≤ 300 m²)</strong>
+              </div>
+              <span class="checkbox-price">+990 €</span>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="jardin-etendu" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Jardin étendu (> 300 m²)</strong>
+                <span>Tarif sur devis</span>
+              </div>
+              <span class="checkbox-price">Sur devis</span>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="piscine" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Piscine / Spa</strong>
+                <span>Scan + modélisation dédiée</span>
+              </div>
+              <span class="checkbox-price">+590 €</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Projections 3D -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Projections 3D</h3></div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <p class="section-helper">490 € / visuel · Remise −10% dès 3 visuels, −15% dès 4</p>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Cuisine</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('proj-cuisine',-1)">−</button>
+              <span class="counter-val" id="proj-cuisine-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('proj-cuisine',1)">+</button>
+            </div>
+            <span class="counter-total" id="proj-cuisine-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Salle de bain</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('proj-sdb',-1)">−</button>
+              <span class="counter-val" id="proj-sdb-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('proj-sdb',1)">+</button>
+            </div>
+            <span class="counter-total" id="proj-sdb-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Salon / Séjour</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('proj-salon',-1)">−</button>
+              <span class="counter-val" id="proj-salon-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('proj-salon',1)">+</button>
+            </div>
+            <span class="counter-total" id="proj-salon-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Chambre / Bureau</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('proj-chambre',-1)">−</button>
+              <span class="counter-val" id="proj-chambre-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('proj-chambre',1)">+</button>
+            </div>
+            <span class="counter-total" id="proj-chambre-total"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Conseils en ameublement -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap">
+            <h3 class="section-title">Conseils en ameublement</h3>
+            <span class="badge">Nouveau</span>
+          </div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <p class="section-helper">490 € / pièce · Sélection mobilier & accessoires · Planche d'ambiance · Remise −10% dès 3 pièces, −15% dès 4</p>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Cuisine</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('cons-cuisine',-1)">−</button>
+              <span class="counter-val" id="cons-cuisine-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('cons-cuisine',1)">+</button>
+            </div>
+            <span class="counter-total" id="cons-cuisine-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Salle de bain</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('cons-sdb',-1)">−</button>
+              <span class="counter-val" id="cons-sdb-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('cons-sdb',1)">+</button>
+            </div>
+            <span class="counter-total" id="cons-sdb-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Salon / Séjour</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('cons-salon',-1)">−</button>
+              <span class="counter-val" id="cons-salon-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('cons-salon',1)">+</button>
+            </div>
+            <span class="counter-total" id="cons-salon-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Chambre / Bureau</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('cons-chambre',-1)">−</button>
+              <span class="counter-val" id="cons-chambre-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('cons-chambre',1)">+</button>
+            </div>
+            <span class="counter-total" id="cons-chambre-total"></span>
+          </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Autre pièce</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('cons-autre',-1)">−</button>
+              <span class="counter-val" id="cons-autre-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('cons-autre',1)">+</button>
+            </div>
+            <span class="counter-total" id="cons-autre-total"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Analyse Comparative -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Analyse Comparative</h3></div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <div class="checkbox-row">
+            <input type="checkbox" id="analyse-fourn" onchange="renderRecap()">
+            <div class="checkbox-label">
+              <strong>Analyse Comparative Fournisseurs</strong>
+              <span>Comparaison 2 enseignes · Tableau chiffré · Recommandation argumentée</span>
+            </div>
+            <span class="checkbox-price">490 €</span>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="analyse-tce" onchange="renderRecap()">
+            <div class="checkbox-label">
+              <strong>Analyse Comparative Entreprise TCE</strong>
+              <span>Comparaison 2 entreprises Tous Corps d'État</span>
+            </div>
+            <span class="checkbox-price">490 €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : AMO -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Accompagnement Projet (AMO)</h3></div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <div class="checkbox-row">
+            <input type="checkbox" id="amo-active" onchange="toggleAMO()">
+            <div class="checkbox-label">
+              <strong>AMO légère — Coordination administrative</strong>
+              <span>4% du budget travaux (min. 1 490 €) · 3% si > 200k €</span>
+            </div>
+          </div>
+          <div id="amo-budget-wrap" style="display:none;margin-top:0.6rem">
+            <div class="form-group">
+              <label class="form-label">Budget travaux estimé (€)</label>
+              <input class="form-input" id="amo-budget" type="number" min="0" placeholder="Ex : 80000" oninput="renderRecap()">
+            </div>
+            <div id="amo-calc" class="info-box" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : DVP -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap">
+            <h3 class="section-title">Dossier Valorisation Patrimoniale</h3>
+            <span class="badge">DVP</span>
+          </div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <p class="section-helper">Dossier numérique premium pour valoriser un bien à la vente ou à la location. Inclut le scan Leica, les plans 2D cotés et des projections photoréalistes.</p>
+          <div class="form-group" style="margin-bottom:0.75rem">
+            <label class="form-label">Type de bien</label>
+            <select class="form-input" id="dvp-type" onchange="renderRecap()">
+              <option value="">Sélectionner le type de bien…</option>
+              <option value="studio">Studio / T2 — 2 visuels inclus — 1 790 €</option>
+              <option value="t3">T3 — 3 visuels inclus — 2 690 €</option>
+              <option value="t4">T4 / Appartement — 4 visuels inclus — 3 490 €</option>
+              <option value="villa">Villa — 5 visuels inclus — 4 490 €</option>
+            </select>
+          </div>
+          <div id="dvp-formule-wrap" style="display:none">
+            <label class="form-label" style="margin-bottom:0.4rem">Formule</label>
+            <div class="agence-grid">
+              <button class="type-btn" onclick="setDVPFormule('standard')" id="btn-dvp-standard" style="grid-column:span 1">
+                <div class="type-btn-label">Standard</div>
+                <div class="type-btn-sub">Tarif de base</div>
+              </button>
+              <button class="type-btn" onclick="setDVPFormule('premium')" id="btn-dvp-premium" style="grid-column:span 2">
+                <div class="type-btn-label">Premium (+30%)</div>
+                <div class="type-btn-sub">Conception Projection Travaux</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Service de Conseils -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Service de Conseils</h3></div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <p class="section-helper">300 € / session de 2h · En présentiel ou visio · Antibes / Côte d'Azur</p>
+          <div class="counter-row">
+            <div class="counter-label">
+              <strong>Sessions de conseil</strong>
+              <span>300 € / session · 2 heures</span>
+            </div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('sessions-conseils',-1)">−</button>
+              <span class="counter-val" id="sessions-conseils-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('sessions-conseils',1)">+</button>
+            </div>
+            <span class="counter-total" id="sessions-conseils-total"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section : Remise & Notes -->
+      <div class="section-card">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title-wrap"><h3 class="section-title">Remise & Notes</h3></div>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </div>
+        <div class="gold-divider"></div>
+        <div class="section-body">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Remise (%)</label>
+              <input class="form-input" id="remise-pct" type="number" min="0" max="100" placeholder="0" oninput="renderRecap()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Notes internes</label>
+              <input class="form-input" id="notes" type="text" placeholder="Conditions particulières…">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /form-col -->
+
+    <!-- ── Récapitulatif sticky ── -->
+    <div class="recap-col">
+      <div class="recap-card">
+        <div class="recap-header">
+          <div class="recap-header-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Récapitulatif
+          </div>
+          <div class="recap-client" id="recap-client-name"></div>
+          <div class="recap-num" id="recap-devis-num"></div>
+        </div>
+        <div class="recap-lines" id="recap-lines">
+          <div class="recap-empty">Sélectionnez des prestations<br>pour voir le récapitulatif</div>
+        </div>
+        <div class="recap-total-box" id="recap-total-box" style="display:none">
+          <div style="height:1px;background:linear-gradient(to right,transparent,var(--or),transparent);margin-bottom:0.75rem"></div>
+          <div id="recap-subtotal-row" class="recap-subtotal-row" style="display:none">
+            <span>Sous-total</span><span id="recap-subtotal-val"></span>
+          </div>
+          <div id="recap-remise-row" class="recap-remise-row" style="display:none">
+            <span id="recap-remise-label"></span><span id="recap-remise-val"></span>
+          </div>
+          <div class="recap-total-row">
+            <span class="recap-total-label">Total HT</span>
+            <span class="recap-total-amount" id="recap-total-amount"></span>
+          </div>
+          <p class="recap-tva">TVA non applicable — art. 293 B du CGI</p>
+        </div>
+        <div class="recap-actions">
+          <button class="btn btn-primary" onclick="handlePrint()" style="width:100%;justify-content:center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2-2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Générer le PDF
+          </button>
+          <button class="btn" onclick="resetDevis()" style="width:100%;justify-content:center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            Nouveau devis
+          </button>
+        </div>
+        <div class="recap-footer">Antibes · Cannes · Nice · Valbonne · Mougins · Grasse<br>ragotcharlotte.com · 06 21 25 69 36</div>
+      </div>
+    </div>
+  </div><!-- /main-container -->
+</div><!-- /app -->
+
+<!-- ══ ZONE D'IMPRESSION ══ -->
+<div id="print-area"></div>
+
+<script>
+// ══ DATA ══
+const LOGO_B64 = 'data:image/png;base64,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';
+
+const PASSWORD = "rcdesign2026";
+
+const TARIFS_PROP = {
+  studio:   { label: "Studio / T2 (20–40 m²)",           price: 990 },
+  t3t4:     { label: "T3 / T4 (60–100 m²)",              price: 1490 },
+  duplex:   { label: "Appartement / Duplex (100–150 m²)", price: 1890 },
+  villa:    { label: "Villa (150–250 m²)",                price: 2490 },
+  prestige: { label: "Villa Prestige (> 250 m²)",         price: 2990 },
+};
+const TARIFS_PROF = {
+  petit:    { label: "Petit local / cabinet (40–100 m²)",   price: 1490 },
+  commerce: { label: "Commerce / restaurant (100–200 m²)",  price: 2190 },
+  grand:    { label: "Grand espace / bureaux (200–400 m²)", price: 3490 },
+  hotel:    { label: "Hôtel / Multi-niveaux (> 400 m²)",    price: 0 },
+};
+const DVP_TYPES = {
+  studio: { label: "Studio / T2",      basePrice: 990,  visuels: 2, bundleStandard: 1790 },
+  t3:     { label: "T3",               basePrice: 1490, visuels: 3, bundleStandard: 2690 },
+  t4:     { label: "T4 / Appartement", basePrice: 1890, visuels: 4, bundleStandard: 3490 },
+  villa:  { label: "Villa",            basePrice: 2490, visuels: 5, bundleStandard: 4490 },
+};
+
+const SOCIETE = {
+  nom: "Charlotte Ragot",
+  adresse: "244 ch des Âmes du Purgatoire",
+  ville: "06600 Antibes",
+  tel: "06 21 25 69 36",
+  web: "ragotcharlotte.com",
+  siret: "451 457 899 00024",
+};
+
+// ══ STATE ══
+let state = {
+  typeClient: "", agenceFormule: "", dvpFormule: "",
+  counters: { "proj-cuisine":0, "proj-sdb":0, "proj-salon":0, "proj-chambre":0,
+              "cons-cuisine":0, "cons-sdb":0, "cons-salon":0, "cons-chambre":0, "cons-autre":0,
+              "sessions-conseils":0 }
+};
+
+// ══ UTILS ══
+function fmt(n) {
+  if (n === 0) return "Sur devis";
+  return new Intl.NumberFormat("fr-FR", { style:"currency", currency:"EUR", maximumFractionDigits:0 }).format(n);
+}
+function genNum() {
+  const d = new Date();
+  const y = d.getFullYear(), m = String(d.getMonth()+1).padStart(2,"0"), day = String(d.getDate()).padStart(2,"0");
+  return "RC-"+y+m+day+"-"+String(Math.floor(Math.random()*900)+100);
+}
+function today() { return new Date().toISOString().split("T")[0]; }
+
+// ══ LOGIN ══
+function doLogin() {
+  const val = document.getElementById("pwd-input").value;
+  if (val === PASSWORD) {
+    sessionStorage.setItem("rc-auth","1");
+    document.getElementById("login-screen").style.display = "none";
+    document.getElementById("app").style.display = "block";
+    initApp();
+  } else {
+    document.getElementById("pwd-input").classList.add("error");
+    document.getElementById("login-error").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("pwd-input").classList.remove("error");
+      document.getElementById("login-error").style.display = "none";
+    }, 2000);
+  }
+}
+document.getElementById("pwd-input").addEventListener("keydown", e => { if(e.key==="Enter") doLogin(); });
+
+// ══ INIT ══
+function initApp() {
+  document.getElementById("devis-num").value = genNum();
+  document.getElementById("devis-date").value = today();
+  renderRecap();
+}
+
+if (sessionStorage.getItem("rc-auth") === "1") {
+  document.getElementById("login-screen").style.display = "none";
+  document.getElementById("app").style.display = "block";
+  initApp();
+}
+
+// ══ UI HELPERS ══
+function toggleSection(header) {
+  const body = header.nextElementSibling.nextElementSibling;
+  const chevron = header.querySelector(".section-chevron");
+  const isOpen = body.classList.contains("open");
+  body.classList.toggle("open");
+  chevron.classList.toggle("open");
+}
+
+function toggleAdresse() {
+  const cb = document.getElementById("meme-adresse");
+  document.getElementById("addr-intervention-wrap").style.display = cb.checked ? "none" : "block";
+}
+
+function setTypeClient(type) {
+  state.typeClient = type;
+  ["proprietaire","professionnel","agence"].forEach(t => {
+    document.getElementById("btn-"+t).classList.toggle("active", t===type);
+    document.getElementById("sub-"+t).style.display = t===type ? "block" : "none";
+  });
+  renderRecap();
+}
+
+function setAgenceFormule(f) {
+  state.agenceFormule = f;
+  ["essai","partenaire","premium"].forEach(k => document.getElementById("btn-ag-"+k).classList.toggle("active", k===f));
+  renderRecap();
+}
+
+function setDVPFormule(f) {
+  state.dvpFormule = f;
+  ["standard","premium"].forEach(k => document.getElementById("btn-dvp-"+k).classList.toggle("active", k===f));
+  renderRecap();
+}
+
+function togglePackExt() {
+  const packOn = document.getElementById("pack-ext").checked;
+  document.getElementById("options-ext-detail").style.display = packOn ? "none" : "block";
+  if (packOn) {
+    ["scan-ext","jardin","jardin-etendu","piscine"].forEach(id => { document.getElementById(id).checked = false; });
+  }
+  renderRecap();
+}
+
+function toggleAMO() {
+  const on = document.getElementById("amo-active").checked;
+  document.getElementById("amo-budget-wrap").style.display = on ? "block" : "none";
+  renderRecap();
+}
+
+function changeCounter(id, delta) {
+  const val = Math.max(0, (state.counters[id] || 0) + delta);
+  state.counters[id] = val;
+  document.getElementById(id+"-val").textContent = val;
+  renderRecap();
+}
+
+// DVP type change
+document.getElementById("dvp-type").addEventListener("change", function() {
+  document.getElementById("dvp-formule-wrap").style.display = this.value ? "block" : "none";
+  state.dvpFormule = "";
+  ["standard","premium"].forEach(k => document.getElementById("btn-dvp-"+k).classList.remove("active"));
+  renderRecap();
+});
+
+// ══ CALCUL LIGNES ══
+function computeLines() {
+  const lines = [];
+
+  const dvpType = document.getElementById("dvp-type").value;
+
+  // Formule de base
+  if (!dvpType) {
+    if (state.typeClient === "proprietaire") {
+      const v = document.getElementById("formule-prop").value;
+      if (v && TARIFS_PROP[v]) {
+        const f = TARIFS_PROP[v];
+        lines.push({ id:"base", label:"Formule Propriétaires — "+f.label, price:f.price,
+          note:"Scan Leica BLK360 G2 · Plans 2D cotés · Analyse structurelle",
+          pdfDesc:"Scan Leica BLK360 G2 · Plans 2D cotés PDF · Rapport de surface",
+          type:"base" });
+        if (document.getElementById("sketchup").checked)
+          lines.push({ id:"sketchup", label:"Élévation 3D SketchUp", price:Math.round(f.price*0.30),
+            pdfDesc:"Modèle 3D volumétrique issu du relevé Leica · Fichier .SKP compatible SketchUp · Cotes et volumes intégrés", type:"sketchup" });
+        if (document.getElementById("express").checked)
+          lines.push({ id:"express", label:"Option Express — Délai 2 jours", price:Math.round(f.price*0.30),
+            pdfDesc:"+30% du tarif de base", type:"express" });
+      }
+    }
+    if (state.typeClient === "professionnel") {
+      const v = document.getElementById("formule-prof").value;
+      if (v && TARIFS_PROF[v]) {
+        const f = TARIFS_PROF[v];
+        lines.push({ id:"base", label:"Formule Professionnels — "+f.label, price:f.price,
+          pdfDesc:"Scan Leica BLK360 G2 · Plans 2D cotés PDF · Rapport de surface", type:"base" });
+        if (document.getElementById("sketchup-prof").checked)
+          lines.push({ id:"sketchup", label:"Élévation 3D SketchUp", price:Math.round(f.price*0.30),
+            pdfDesc:"Modèle 3D volumétrique issu du relevé Leica · Fichier .SKP compatible SketchUp · Cotes et volumes intégrés", type:"sketchup" });
+        if (document.getElementById("express-prof").checked)
+          lines.push({ id:"express", label:"Option Express — Délai 2 jours", price:Math.round(f.price*0.30),
+            pdfDesc:"+30% du tarif de base", type:"express" });
+      }
+    }
+    if (state.typeClient === "agence" && state.agenceFormule) {
+      const v = document.getElementById("formule-agence-bien").value;
+      if (v && TARIFS_PROP[v]) {
+        const f = TARIFS_PROP[v];
+        const remisePct = state.agenceFormule==="essai"?10:state.agenceFormule==="partenaire"?15:20;
+        const label = state.agenceFormule==="essai"?"Essai −10%":state.agenceFormule==="partenaire"?"Partenaire −15%":"Premium −20%";
+        const prixNet = Math.round(f.price*(1-remisePct/100));
+        lines.push({ id:"base", label:"Formule Agence ("+label+") — "+f.label, price:prixNet,
+          note:"Tarif rack "+fmt(f.price)+" · Remise partenaire appliquée",
+          pdfDesc:"Scan Leica BLK360 G2 · Plans 2D cotés PDF · Rapport de surface", type:"base" });
+      }
+    }
+  }
+
+  // Options extérieures
+  if (document.getElementById("pack-ext").checked) {
+    lines.push({ id:"pack-ext", label:"Pack Extérieur Complet", price:1790,
+      note:"Scan ext. + jardin (≤ 300 m²) + piscine/spa · Économie 280 €",
+      pdfDesc:"Scan ext. (terrasse, véranda, cour) · Modélisation jardin ≤ 300 m² · Scan piscine/spa", type:"ext" });
+  } else {
+    if (document.getElementById("scan-ext").checked)
+      lines.push({ id:"scan-ext", label:"Scan Extérieur", price:490,
+        pdfDesc:"Scan Leica BLK360 G2 · Terrasse · véranda · cour intérieure · zone de retournement", type:"ext" });
+    if (document.getElementById("jardin").checked)
+      lines.push({ id:"jardin", label:"Jardin — Modélisation 3D (≤ 300 m²)", price:990,
+        pdfDesc:"Modélisation 3D du jardin · Surface ≤ 300 m²", type:"ext" });
+    if (document.getElementById("jardin-etendu").checked)
+      lines.push({ id:"jardin-etendu", label:"Jardin étendu (> 300 m²)", price:0,
+        pdfDesc:"Tarif sur devis — surface > 300 m²", type:"ext" });
+    if (document.getElementById("piscine").checked)
+      lines.push({ id:"piscine", label:"Piscine / Spa", price:590,
+        pdfDesc:"Scan Leica BLK360 G2 · Modélisation 3D dédiée piscine / spa", type:"ext" });
+  }
+
+  // Projections 3D
+  if (!dvpType) {
+    const projItems = [
+      { key:"proj-cuisine",  label:"Projection 3D — Cuisine" },
+      { key:"proj-sdb",      label:"Projection 3D — Salle de bain" },
+      { key:"proj-salon",    label:"Projection 3D — Salon / Séjour" },
+      { key:"proj-chambre",  label:"Projection 3D — Chambre / Bureau" },
+    ];
+    const total3D = projItems.reduce((s,p) => s+(state.counters[p.key]||0), 0);
+    const remise3D = total3D>=4?0.15:total3D>=3?0.10:0;
+    projItems.forEach(p => {
+      const qty = state.counters[p.key]||0;
+      if (qty>0) {
+        const brut = 490*qty;
+        const net = remise3D>0?Math.round(brut*(1-remise3D)):brut;
+        lines.push({ id:p.key, label:p.label, price:net, qty,
+          note:remise3D>0?"490 € × "+qty+" · Remise multi-visuels −"+(remise3D*100)+"%":"490 € × "+qty,
+          pdfDesc:"Visuel photoréaliste haute définition · Fichier HD livré sous 5–7 jours", type:"proj3d" });
+      }
+    });
+    // update counter totals
+    projItems.forEach(p => {
+      const qty = state.counters[p.key]||0;
+      const el = document.getElementById(p.key+"-total");
+      if (el) el.textContent = qty>0?fmt(490*qty*(1-remise3D)):"";
+    });
+  }
+
+  // Conseils en ameublement
+  const consItems = [
+    { key:"cons-cuisine",  label:"Conseils Ameublement — Cuisine" },
+    { key:"cons-sdb",      label:"Conseils Ameublement — Salle de bain" },
+    { key:"cons-salon",    label:"Conseils Ameublement — Salon / Séjour" },
+    { key:"cons-chambre",  label:"Conseils Ameublement — Chambre / Bureau" },
+    { key:"cons-autre",    label:"Conseils Ameublement — Autre pièce" },
+  ];
+  const totalCons = consItems.reduce((s,p) => s+(state.counters[p.key]||0), 0);
+  const remiseCons = totalCons>=4?0.15:totalCons>=3?0.10:0;
+  consItems.forEach(p => {
+    const qty = state.counters[p.key]||0;
+    if (qty>0) {
+      const brut = 490*qty;
+      const net = remiseCons>0?Math.round(brut*(1-remiseCons)):brut;
+      lines.push({ id:p.key, label:p.label, price:net, qty,
+        note:remiseCons>0?"490 € × "+qty+" · Remise multi-pièces −"+(remiseCons*100)+"%":"490 € × "+qty,
+        pdfDesc:"Sélection mobilier & accessoires · Planche d'ambiance · Recommandations fournisseurs", type:"conseil-ameublement" });
+    }
+  });
+  consItems.forEach(p => {
+    const qty = state.counters[p.key]||0;
+    const el = document.getElementById(p.key+"-total");
+    if (el) el.textContent = qty>0?fmt(490*qty*(1-remiseCons)):"";
+  });
+
+  // Analyse comparative
+  if (document.getElementById("analyse-fourn").checked)
+    lines.push({ id:"analyse-fourn", label:"Analyse Comparative — Fournisseurs", price:490,
+      pdfDesc:"Comparaison 2 enseignes · Tableau chiffré · Recommandation argumentée", type:"analyse" });
+  if (document.getElementById("analyse-tce").checked)
+    lines.push({ id:"analyse-tce", label:"Analyse Comparative — Entreprise TCE", price:490,
+      pdfDesc:"Comparaison 2 entreprises Tous Corps d'État · Tableau chiffré · Recommandation argumentée", type:"analyse" });
+
+  // AMO
+  if (document.getElementById("amo-active").checked) {
+    const budget = parseFloat(document.getElementById("amo-budget").value)||0;
+    if (budget>0) {
+      const taux = budget>200000?0.03:0.04;
+      const amo = Math.max(Math.round(budget*taux),1490);
+      document.getElementById("amo-calc").style.display = "block";
+      document.getElementById("amo-calc").textContent = (taux===0.03?"Taux 3%":"Taux 4%")+" · Honoraires estimés : "+fmt(amo);
+      lines.push({ id:"amo", label:"Accompagnement Projet Rénovation (AMO légère)", price:amo,
+        note:(taux===0.03?"3%":"4%")+" du budget travaux ("+fmt(budget)+") · min. 1 490 €",
+        pdfDesc:"Coordination devis entreprises partenaires · Chiffrage · Planning · Sans responsabilité technique ni décennale", type:"amo" });
+    } else {
+      document.getElementById("amo-calc").style.display = "none";
+    }
+  }
+
+  // DVP
+  if (dvpType && state.dvpFormule) {
+    const dvp = DVP_TYPES[dvpType];
+    if (dvp) {
+      const isPremium = state.dvpFormule==="premium";
+      const prix = isPremium?Math.round(dvp.bundleStandard*1.30):dvp.bundleStandard;
+      lines.push({ id:"dvp", label:"DVP — "+dvp.label+" · Formule "+(isPremium?"Premium":"Standard"), price:prix,
+        note:isPremium?("Standard "+fmt(dvp.bundleStandard)+" × 1,30 · Conception Projection Travaux"):("Scan + plans + "+dvp.visuels+" visuels · Économie "+fmt((dvp.basePrice+dvp.visuels*490)-dvp.bundleStandard)+" vs. séparé"),
+        pdfDesc:isPremium?"Scan Leica BLK360 G2 · Plans 2D cotés · Visuels photoréalistes — Conception Projection Travaux":"Scan Leica BLK360 G2 · Plans 2D cotés · Visuels photoréalistes du bien valorisé",
+        type:"dvp" });
+    }
+  }
+
+  // Service de Conseils
+  const sessions = state.counters["sessions-conseils"]||0;
+  if (sessions>0) {
+    lines.push({ id:"sessions", label:"Service de Conseils — "+sessions+" session"+(sessions>1?"s":""), price:300*sessions,
+      qty:sessions, note:"300 € × "+sessions+" session"+(sessions>1?"s":""),
+      pdfDesc:"Session de conseil personnalisé · 2 heures · En présentiel ou visio · Antibes / Côte d'Azur", type:"conseils" });
+  }
+  const el = document.getElementById("sessions-conseils-total");
+  if (el) el.textContent = sessions>0?fmt(300*sessions):"";
+
+  return lines;
+}
+
+// ══ RENDER RECAP ══
+function renderRecap() {
+  const lines = computeLines();
+  const clientNom = document.getElementById("client-nom").value;
+  const devisNum = document.getElementById("devis-num").value;
+
+  document.getElementById("recap-client-name").textContent = clientNom || "";
+  document.getElementById("recap-devis-num").textContent = devisNum || "";
+
+  const linesEl = document.getElementById("recap-lines");
+  const totalBox = document.getElementById("recap-total-box");
+
+  if (lines.length===0) {
+    linesEl.innerHTML = '<div class="recap-empty">Sélectionnez des prestations<br>pour voir le récapitulatif</div>';
+    totalBox.style.display = "none";
+    return;
+  }
+
+  linesEl.innerHTML = lines.map(l => `
+    <div class="recap-line">
+      <div>
+        <div class="recap-line-label">${l.label}</div>
+        ${l.note?'<div class="recap-line-note">'+l.note+'</div>':""}
+      </div>
+      <span class="recap-line-price">${l.price===0?"Sur devis":fmt(l.price)}</span>
+    </div>
+  `).join("");
+
+  const subtotal = lines.reduce((s,l)=>s+l.price,0);
+  const remisePct = parseFloat(document.getElementById("remise-pct").value)||0;
+  const remise = remisePct>0?Math.round(subtotal*remisePct/100):0;
+  const total = subtotal-remise;
+
+  totalBox.style.display = "block";
+
+  const subRow = document.getElementById("recap-subtotal-row");
+  const remRow = document.getElementById("recap-remise-row");
+  if (remise>0) {
+    subRow.style.display = "flex";
+    document.getElementById("recap-subtotal-val").textContent = fmt(subtotal);
+    remRow.style.display = "flex";
+    document.getElementById("recap-remise-label").textContent = "Remise ("+remisePct+"%)";
+    document.getElementById("recap-remise-val").textContent = "−"+fmt(remise);
+  } else {
+    subRow.style.display = "none";
+    remRow.style.display = "none";
+  }
+  document.getElementById("recap-total-amount").textContent = fmt(total);
+}
+
+// ══ RESET ══
+function resetDevis() {
+  state = { typeClient:"", agenceFormule:"", dvpFormule:"",
+    counters:{"proj-cuisine":0,"proj-sdb":0,"proj-salon":0,"proj-chambre":0,
+              "cons-cuisine":0,"cons-sdb":0,"cons-salon":0,"cons-chambre":0,"cons-autre":0,
+              "sessions-conseils":0}};
+  document.getElementById("devis-num").value = genNum();
+  document.getElementById("devis-date").value = today();
+  document.getElementById("client-nom").value = "";
+  document.getElementById("client-email").value = "";
+  document.getElementById("client-tel").value = "";
+  document.getElementById("client-adresse").value = "";
+  document.getElementById("client-intervention").value = "";
+  document.getElementById("meme-adresse").checked = true;
+  document.getElementById("addr-intervention-wrap").style.display = "none";
+  ["proprietaire","professionnel","agence"].forEach(t => {
+    document.getElementById("btn-"+t).classList.remove("active");
+    document.getElementById("sub-"+t).style.display = "none";
+  });
+  document.getElementById("formule-prop").value = "";
+  document.getElementById("formule-prof").value = "";
+  document.getElementById("formule-agence-bien").value = "";
+  document.getElementById("sketchup").checked = false;
+  document.getElementById("sketchup-prof").checked = false;
+  document.getElementById("express").checked = false;
+  document.getElementById("express-prof").checked = false;
+  ["pack-ext","scan-ext","jardin","jardin-etendu","piscine","analyse-fourn","analyse-tce","amo-active"].forEach(id => {
+    document.getElementById(id).checked = false;
+  });
+  document.getElementById("options-ext-detail").style.display = "block";
+  document.getElementById("amo-budget-wrap").style.display = "none";
+  document.getElementById("amo-budget").value = "";
+  document.getElementById("dvp-type").value = "";
+  document.getElementById("dvp-formule-wrap").style.display = "none";
+  ["standard","premium"].forEach(k => document.getElementById("btn-dvp-"+k).classList.remove("active"));
+  ["essai","partenaire","premium"].forEach(k => document.getElementById("btn-ag-"+k).classList.remove("active"));
+  Object.keys(state.counters).forEach(k => {
+    const el = document.getElementById(k+"-val");
+    if (el) el.textContent = "0";
+    const tel = document.getElementById(k+"-total");
+    if (tel) tel.textContent = "";
+  });
+  document.getElementById("remise-pct").value = "";
+  document.getElementById("notes").value = "";
+  renderRecap();
+}
+
+// ══ FICHES DESCRIPTIVES (Page 2) ══
+const FICHES_DATA = {
+  base: {
+    proprietaire: {
+      title:"Relevé de Scan & Plans 2D",
+      desc:"RC Design Intérieur réalise un relevé complet de votre bien à l'aide du scanner laser Leica BLK360 G2, la référence en matière de numérisation 3D. En une seule visite, toutes les cotes, surfaces, hauteurs sous plafond et volumes complexes sont capturés avec précision au millimètre.",
+      includes:["Scan 3D complet avec scanner Leica BLK360 G2","Capture de toutes les surfaces, cotes et hauteurs sous plafond","Plans cotés PDF livrés sous 5–7 jours","Photographies et analyse technique des volumes","Rapport de surface détaillé","Aucune préparation de votre part du mobilier","Base fiable pour toute phase de conception"],
+      duration:"Durée intervention : 2 heures environ"
+    },
+    professionnel: {
+      title:"Relevé de Scan & Plans 2D — Professionnel",
+      desc:"RC Design Intérieur réalise un relevé complet de votre local professionnel à l'aide du scanner laser Leica BLK360 G2. Idéal pour les commerces, cabinets, bureaux et espaces hôteliers, ce relevé millimétrique constitue la base indispensable de tout projet d'aménagement sérieux.",
+      includes:["Scan 3D complet avec scanner Leica BLK360 G2","Plans cotés PDF livrés sous 5–7 jours","Analyse structurelle et technique des volumes","Rapport de surface et contraintes","Aucune préparation de votre part du mobilier","Livrables exploitables par vos prestataires"],
+      duration:"Durée intervention : 2 heures environ"
+    },
+    agence: {
+      title:"Relevé de Scan & Plans 2D — Agence Partenaire",
+      desc:"Dans le cadre du partenariat agence immobilière, RC Design Intérieur réalise le relevé Leica BLK360 G2 de vos biens avec tarif préférentiel. Des plans précis au millimètre qui valorisent vos mandats et accélèrent les décisions d'achat.",
+      includes:["Scan 3D complet avec scanner Leica BLK360 G2","Plans cotés PDF livrés sous 5–7 jours","Tarif partenaire avec remise appliquée","Aucune préparation de votre part du mobilier","Interlocuteur unique Charlotte Ragot"],
+      duration:"Durée intervention : 2 heures environ"
+    }
+  },
+  sketchup: {
+    title:"Élévation 3D SketchUp",
+    desc:"En complément du relevé Leica BLK360 G2, RC Design Intérieur livre le modèle 3D volumétrique de votre bien sous forme de fichier SketchUp (.SKP) directement exploitable. Sans ressaisie, sans perte de précision, vos architectes, décorateurs ou entreprises partenaires disposent d'une base de travail immédiatement opérationnelle.",
+    includes:["Modèle 3D volumétrique issu du relevé Leica BLK360 G2","Fichier .SKP compatible SketchUp (toutes versions)","Cotes, volumes et hauteurs sous plafond intégrés","Prêt à l'emploi pour architectes, décorateurs et prestataires","Transmis en complément des plans 2D cotés PDF"]
+  },
+  express: {
+    title:"Option Express — Livraison 48h",
+    desc:"Pour les projets urgents, RC Design Intérieur mobilise ses ressources en priorité absolue pour livrer votre dossier complet sous 48 heures à compter de la réception de l'acompte et de l'accès au bien.",
+    includes:["Traitement prioritaire de votre dossier","Livraison garantie sous 48h","Interlocuteur dédié durant toute la mission"]
+  },
+  ext: {
+    title:"Scan Extérieur",
+    desc:"Complétez votre relevé intérieur par une numérisation complète de vos espaces extérieurs. Terrasses, jardins, vérandas et piscines sont capturés avec la même précision millimétrique pour un dossier complet de votre bien.",
+    includes:["Scan Leica BLK360 G2 des espaces extérieurs","Capture des terrasses, vérandas et cours intérieures","Intégration piscine / spa si option souscrite","Plans côtés des zones extérieures"]
+  },
+  proj3d: {
+    title:"Projections 3D Photoréalistes",
+    desc:"Les projections 3D immersives permettent de visualiser parfaitement le projet avant tout engagement. Elles constituent un outil essentiel pour valider chaque choix avec précision et sécuriser les décisions en amont des commandes.",
+    includes:["Rendus réalistes en lumière naturelle & artificielle","Rendus haute définition par pièce sélectionnée","Ajustements pré-validation selon vos retours","Validation finale avant livraison","Fichier HD livré sous 5–7 jours"]
+  },
+  "conseil-ameublement": {
+    title:"Conseils en Ameublement",
+    desc:"Charlotte Ragot vous accompagne dans la sélection du mobilier et des accessoires pour chaque pièce de votre projet. Sur la base de votre style de vie, de vos goûts et de votre budget, elle compose une sélection cohérente, esthétique et fonctionnelle auprès de ses fournisseurs partenaires.",
+    includes:["Sélection mobilier & accessoires par pièce","Planche d'ambiance (moodboard) harmonisée","Recommandations fournisseurs partenaires","Devis et liste d'achats détaillée","Conseils couleurs, matériaux et luminaires"]
+  },
+  analyse: {
+    title:"Analyse Comparative",
+    desc:"Pour sécuriser vos choix de fournisseurs ou d'entreprises, RC Design Intérieur réalise une analyse comparative rigoureuse. Chaque option est évaluée selon des critères objectifs (prix, qualité, délais, références) et présentée dans un tableau structuré avec recommandation argumentée.",
+    includes:["Comparaison de 2 enseignes ou entreprises","Tableau chiffré et critères objectifs","Analyse rapport qualité / prix / délais","Recommandation écrite et argumentée","Mise en relation avec le prestataire retenu"]
+  },
+  amo: {
+    title:"Accompagnement Projet Rénovation (AMO)",
+    desc:"RC Design Intérieur assure une mission d'Assistance à Maîtrise d'Ouvrage légère pour coordonner administrativement votre chantier de rénovation. En tant qu'interlocuteur unique, Charlotte Ragot coordonne les devis, organise le planning et assure la mise en relation avec les entreprises partenaires qualifiées.",
+    includes:["Coordination des devis auprès des entreprises partenaires","Analyse et chiffrage comparatif","Élaboration du planning d'intervention","Mise en relation et suivi des prestataires","Comptes rendus réguliers (photos, vidéos)","Mission de conseil et coordination uniquement — sans responsabilité décennale"]
+  },
+  dvp: {
+    standard: {
+      title:"Dossier de Valorisation Patrimoniale — Standard",
+      desc:"Le Dossier de Valorisation Patrimoniale Standard est un outil numérique conçu pour valoriser un bien immobilier à la vente ou à la location. Il combine le relevé de scan précis, les plans 2D cotés et des projections photoréalistes du bien dans son état actuel valorisé.",
+      includesBase:["Scan Leica BLK360 G2 complet du bien","Plans 2D cotés précis au millimètre","Dossier numérique clé en main","Outil de valorisation pour agences et propriétaires"]
+    },
+    premium: {
+      title:"Dossier de Valorisation Patrimoniale — Premium",
+      desc:"La formule Premium va au-delà du simple état des lieux valorisé : Charlotte Ragot conçoit et projette le bien après transformation. Cloison abattue, cuisine ouverte, salle de bain rénovée… Le client visualise le potentiel réel du bien avant même les travaux.",
+      includesBase:["Scan Leica BLK360 G2 complet du bien","Plans 2D cotés précis au millimètre","Conception Projection Travaux — vision du bien transformé","Visuels avant/après photoréalistes","Dossier numérique premium clé en main","Outil de valorisation différenciateur sur le marché"]
+    }
+  },
+  conseils: {
+    title:"Service de Conseils",
+    desc:"Le Service de Conseils permet de bénéficier de l'expertise de Charlotte Ragot en dehors d'un projet complet. En présentiel sur la Côte d'Azur ou en visioconférence, chaque session de 2 heures est dédiée à vos questions d'aménagement, décoration, choix de matériaux ou optimisation d'espaces.",
+    includes:["Session individuelle de 2 heures","En présentiel (Antibes / Côte d'Azur) ou en visio","Conseils d'aménagement & décoration personnalisés","Recommandations matériaux, couleurs, mobilier","Compte rendu écrit transmis après la session"]
+  }
+};
+
+// ══ PRINT ══
+function handlePrint() {
+  const clientNom = document.getElementById("client-nom").value;
+  if (!clientNom) { alert("Veuillez renseigner le nom du client avant d'imprimer."); return; }
+  const lines = computeLines();
+  if (lines.length===0) { alert("Veuillez sélectionner au moins une prestation."); return; }
+
+  const devisNum = document.getElementById("devis-num").value;
+  const devisDate = document.getElementById("devis-date").value;
+  const clientEmail = document.getElementById("client-email").value;
+  const clientTel = document.getElementById("client-tel").value;
+  const clientAdresse = document.getElementById("client-adresse").value;
+  const memeAdresse = document.getElementById("meme-adresse").checked;
+  const clientIntervention = document.getElementById("client-intervention").value;
+  const notes = document.getElementById("notes").value;
+  const remisePct = parseFloat(document.getElementById("remise-pct").value)||0;
+
+  const subtotal = lines.reduce((s,l)=>s+l.price,0);
+  const remise = remisePct>0?Math.round(subtotal*remisePct/100):0;
+  const total = subtotal-remise;
+
+  const dateStr = devisDate ? new Date(devisDate).toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"}) : "";
+
+  // Page 1 : Devis
+  let p1 = `<div class="print-page1">
+    <div class="print-header">
+      <div>
+        <img class="print-logo" src="${LOGO_B64}" alt="RC Design">
+        <div class="print-company">
+          <strong style="font-size:8pt;color:#B8963E;font-family:\'Cormorant Garamond\',serif;font-weight:600">RC DESIGN INTÉRIEUR</strong><br>
+          Cabinet d\'étude en architecture d\'intérieur &amp; design d\'espace<br>
+          Mme RAGOT Charlotte<br>
+          ${SOCIETE.adresse}<br>
+          ${SOCIETE.ville}<br>
+          ${SOCIETE.tel} · ${SOCIETE.web}<br>
+          SIRET : ${SOCIETE.siret}
+        </div>
+      </div>
+      <div>
+        <div class="print-devis-title">DEVIS</div>
+        <div class="print-devis-meta">N° ${devisNum}<br>${dateStr}</div>
+      </div>
+    </div>`;
+
+  if (clientNom) {
+    p1 += `<div class="print-client-block">
+      <div class="print-client-tag">Client</div>
+      <div class="print-client-name">${clientNom}</div>
+      ${clientAdresse?'<div class="print-client-detail"><span style="font-size:6pt;text-transform:uppercase;letter-spacing:0.08em;color:#aaa">Facturation : </span>'+clientAdresse+'</div>':""}
+      ${!memeAdresse&&clientIntervention?'<div class="print-client-detail"><span style="font-size:6pt;text-transform:uppercase;letter-spacing:0.08em;color:#B8963E">Intervention : </span>'+clientIntervention+'</div>':""}
+      ${clientEmail?'<div class="print-client-detail">'+clientEmail+'</div>':""}
+      ${clientTel?'<div class="print-client-detail">'+clientTel+'</div>':""}
+    </div>`;
+  }
+
+  p1 += `<table class="print-table">
+    <thead><tr>
+      <th>Prestation</th>
+      <th style="text-align:right;width:90px">Montant HT</th>
+    </tr></thead>
+    <tbody>`;
+
+  lines.forEach(l => {
+    p1 += `<tr>
+      <td>
+        <div class="print-td-label">${l.label}</div>
+        ${l.pdfDesc?'<div class="print-td-desc">'+l.pdfDesc+'</div>':""}
+      </td>
+      <td class="print-td-price">${l.price===0?"Sur devis":fmt(l.price)}</td>
+    </tr>`;
+  });
+
+  p1 += `</tbody></table>
+    <div class="print-total-wrap">
+      <div class="print-total-inner">
+        ${remise>0?`<div class="print-subtotal-row"><span>Sous-total HT</span><span>${fmt(subtotal)}</span></div>
+        <div class="print-remise-row"><span>Remise (${remisePct}%)</span><span>−${fmt(remise)}</span></div>`:""}
+        <div class="print-total-row">
+          <span class="print-total-label">Total HT</span>
+          <span class="print-total-amount">${fmt(total)}</span>
+        </div>
+        <p class="print-tva">TVA non applicable — article 293 B du CGI</p>
+      </div>
+    </div>`;
+
+  if (notes) {
+    p1 += `<div class="print-notes-box">
+      <div class="print-notes-tag">Notes</div>
+      <p class="print-notes-text">${notes}</p>
+    </div>`;
+  }
+
+  const hasAmo = lines.some(l=>l.id==="amo");
+  p1 += `<div class="print-legal">
+    <p>Ce devis est valable 30 jours à compter de sa date d'émission. Un acompte de 30% sera demandé à la commande. Les délais indiqués courent à compter de la réception de l'acompte et de l'accès au bien. Déplacements inclus dans un rayon de 30 km autour d'Antibes.</p>
+    ${hasAmo?'<p style="margin-top:4px">RC Design Intérieur n\'est pas titulaire de la garantie décennale. La mission d\'accompagnement projet est une prestation de conseil et de coordination administrative, sans responsabilité sur l\'exécution des travaux.</p>':""}
+    <p style="margin-top:4px">RC Design Intérieur · ${SOCIETE.nom} · ${SOCIETE.adresse}, ${SOCIETE.ville} · ${SOCIETE.tel} · ${SOCIETE.web} · SIRET : ${SOCIETE.siret}</p>
+  </div>
+  </div>`;
+
+  // Page 2 : Fiches descriptives
+  const ficheTypes = [];
+  const seen = new Set();
+  lines.forEach(l => {
+    const t = l.type;
+    if (!t || seen.has(t)) return;
+    if (t==="base") {
+      seen.add(t);
+      ficheTypes.push({ type:"base", subtype: state.typeClient });
+    } else if (t==="dvp") {
+      seen.add(t);
+      ficheTypes.push({ type:"dvp", formule: state.dvpFormule });
+    } else {
+      seen.add(t);
+      ficheTypes.push({ type:t });
+    }
+  });
+
+  const dvpTypeSel = document.getElementById("dvp-type").value;
+  const dvpVisuels = dvpTypeSel && DVP_TYPES[dvpTypeSel] ? DVP_TYPES[dvpTypeSel].visuels : null;
+  const dvpLabel = dvpTypeSel && DVP_TYPES[dvpTypeSel] ? DVP_TYPES[dvpTypeSel].label : "";
+
+  let fichesHTML = "";
+  ficheTypes.forEach(f => {
+    let data;
+    let extraIncludes = [];
+    let duration = null;
+
+    if (f.type==="base") {
+      data = FICHES_DATA.base[f.subtype] || FICHES_DATA.base.proprietaire;
+      duration = data.duration;
+    } else if (f.type==="dvp") {
+      const dvpData = f.formule==="premium" ? FICHES_DATA.dvp.premium : FICHES_DATA.dvp.standard;
+      data = dvpData;
+      extraIncludes = dvpVisuels
+        ? [dvpVisuels + " projection" + (dvpVisuels>1?"s":"") + " photoréaliste" + (dvpVisuels>1?"s":"") + " incluse" + (dvpVisuels>1?"s":"") + " — " + dvpLabel]
+        : [];
+    } else {
+      data = FICHES_DATA[f.type];
+    }
+    if (!data) return;
+
+    const allIncludes = (data.includesBase || data.includes || []).concat(extraIncludes);
+
+    fichesHTML += `<div class="fiche">
+      <div class="fiche-header">
+        <span class="fiche-title">${data.title}</span>
+      </div>
+      <div class="fiche-body">
+        <p class="fiche-desc">${data.desc}</p>
+        <ul class="fiche-includes">
+          ${allIncludes.map(i=>`<li>${i}</li>`).join("")}
+        </ul>
+        ${duration ? `<p class="fiche-duration">${duration}</p>` : ""}
+      </div>
+    </div>`;
+  });
+
+  let p2 = `<div class="print-page2">
+    <div class="print-page2-header">
+      <div>
+        <div class="print-page2-title">Détail des prestations</div>
+        <div class="print-page2-sub">RC Design Intérieur · Charlotte Ragot · Architecte d'intérieur · Côte d'Azur</div>
+      </div>
+      <div class="print-page2-devis">Devis N° ${devisNum}<br>${dateStr}<br>Client : ${clientNom}</div>
+    </div>
+    <div class="fiches-grid">${fichesHTML}</div>
+  </div>`;
+
+  document.getElementById("print-area").innerHTML = p1+p2;
+  window.print();
+}
+</script>
+</body>
+</html>
