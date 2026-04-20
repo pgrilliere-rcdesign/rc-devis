@@ -784,6 +784,21 @@ select.form-input { cursor: pointer; }
             </div>
             <span class="counter-total" id="proj-chambre-total"></span>
           </div>
+          <div class="counter-row">
+            <div class="counter-label"><strong>Autre pièce</strong></div>
+            <div class="counter-controls">
+              <button class="counter-btn" onclick="changeCounter('proj-autre',-1)">−</button>
+              <span class="counter-val" id="proj-autre-val">0</span>
+              <button class="counter-btn" onclick="changeCounter('proj-autre',1)">+</button>
+            </div>
+            <span class="counter-total" id="proj-autre-total"></span>
+          </div>
+          <div id="proj-autre-detail-wrap" style="display:none;margin-top:0.5rem">
+            <div class="form-group">
+              <label class="form-label">Préciser la ou les pièces</label>
+              <input class="form-input" id="proj-autre-detail" type="text" placeholder="Ex : Dressing, entrée, buanderie…" oninput="renderRecap()">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -843,6 +858,12 @@ select.form-input { cursor: pointer; }
               <button class="counter-btn" onclick="changeCounter('cons-autre',1)">+</button>
             </div>
             <span class="counter-total" id="cons-autre-total"></span>
+          </div>
+          <div id="cons-autre-detail-wrap" style="display:none;margin-top:0.5rem">
+            <div class="form-group">
+              <label class="form-label">Préciser la ou les pièces</label>
+              <input class="form-input" id="cons-autre-detail" type="text" placeholder="Ex : Dressing, entrée, buanderie…" oninput="renderRecap()">
+            </div>
           </div>
         </div>
       </div>
@@ -1068,7 +1089,7 @@ const SOCIETE = {
 // ══ STATE ══
 let state = {
   typeClient: "", agenceFormule: "", dvpFormule: "",
-  counters: { "proj-cuisine":0, "proj-sdb":0, "proj-salon":0, "proj-chambre":0,
+  counters: { "proj-cuisine":0, "proj-sdb":0, "proj-salon":0, "proj-chambre":0, "proj-autre":0,
               "cons-cuisine":0, "cons-sdb":0, "cons-salon":0, "cons-chambre":0, "cons-autre":0,
               "sessions-conseils":0 }
 };
@@ -1261,7 +1282,13 @@ function computeLines() {
       { key:"proj-sdb",      label:"Projection 3D — Salle de bain" },
       { key:"proj-salon",    label:"Projection 3D — Salon / Séjour" },
       { key:"proj-chambre",  label:"Projection 3D — Chambre / Bureau" },
+      { key:"proj-autre",    label:"Projection 3D — Autre pièce" },
     ];
+    // Affichage dynamique du champ saisie "Autre pièce"
+    const projAutreQty = state.counters["proj-autre"]||0;
+    const projAutreWrap = document.getElementById("proj-autre-detail-wrap");
+    if (projAutreWrap) projAutreWrap.style.display = projAutreQty>0 ? "block" : "none";
+
     const total3D = projItems.reduce((s,p) => s+(state.counters[p.key]||0), 0);
     const remise3D = total3D>=4?0.15:total3D>=3?0.10:0;
     projItems.forEach(p => {
@@ -1269,7 +1296,12 @@ function computeLines() {
       if (qty>0) {
         const brut = 490*qty;
         const net = remise3D>0?Math.round(brut*(1-remise3D)):brut;
-        lines.push({ id:p.key, label:p.label, price:net, qty,
+        let label = p.label;
+        if (p.key==="proj-autre") {
+          const detail = (document.getElementById("proj-autre-detail")||{}).value||"";
+          if (detail.trim()) label = "Projection 3D — "+detail.trim();
+        }
+        lines.push({ id:p.key, label:label, price:net, qty,
           note:remise3D>0?"490 € × "+qty+" · Remise multi-visuels −"+(remise3D*100)+"%":"490 € × "+qty,
           pdfDesc:"Visuel photoréaliste haute définition · Fichier HD livré sous 5–7 jours", type:"proj3d" });
       }
@@ -1290,6 +1322,11 @@ function computeLines() {
     { key:"cons-chambre",  label:"Conseils Ameublement — Chambre / Bureau" },
     { key:"cons-autre",    label:"Conseils Ameublement — Autre pièce" },
   ];
+  // Affichage dynamique du champ saisie "Autre pièce"
+  const consAutreQty = state.counters["cons-autre"]||0;
+  const consAutreWrap = document.getElementById("cons-autre-detail-wrap");
+  if (consAutreWrap) consAutreWrap.style.display = consAutreQty>0 ? "block" : "none";
+
   const totalCons = consItems.reduce((s,p) => s+(state.counters[p.key]||0), 0);
   const remiseCons = totalCons>=4?0.15:totalCons>=3?0.10:0;
   consItems.forEach(p => {
@@ -1297,7 +1334,12 @@ function computeLines() {
     if (qty>0) {
       const brut = 490*qty;
       const net = remiseCons>0?Math.round(brut*(1-remiseCons)):brut;
-      lines.push({ id:p.key, label:p.label, price:net, qty,
+      let label = p.label;
+      if (p.key==="cons-autre") {
+        const detail = (document.getElementById("cons-autre-detail")||{}).value||"";
+        if (detail.trim()) label = "Conseils Ameublement — "+detail.trim();
+      }
+      lines.push({ id:p.key, label:label, price:net, qty,
         note:remiseCons>0?"490 € × "+qty+" · Remise multi-pièces −"+(remiseCons*100)+"%":"490 € × "+qty,
         pdfDesc:"Sélection mobilier & accessoires · Planche d'ambiance · Recommandations fournisseurs", type:"conseil-ameublement" });
     }
@@ -1452,6 +1494,15 @@ function resetDevis() {
   });
   document.getElementById("remise-pct").value = "";
   document.getElementById("notes").value = "";
+  // Vider les champs saisie "Autre pièce"
+  const pa = document.getElementById("proj-autre-detail");
+  if (pa) pa.value = "";
+  const ca = document.getElementById("cons-autre-detail");
+  if (ca) ca.value = "";
+  const paw = document.getElementById("proj-autre-detail-wrap");
+  if (paw) paw.style.display = "none";
+  const caw = document.getElementById("cons-autre-detail-wrap");
+  if (caw) caw.style.display = "none";
   renderRecap();
 }
 
