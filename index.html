@@ -1373,7 +1373,7 @@ function computeLines() {
       document.getElementById("amo-calc").textContent = (taux===0.03?"Taux 3%":"Taux 4%")+" · Honoraires estimés : "+fmt(amo);
       lines.push({ id:"amo", label:"Accompagnement Projet Rénovation (AMO légère)", price:amo,
         note:(taux===0.03?"3%":"4%")+" du budget travaux ("+fmt(budget)+") · min. 1 490 €",
-        pdfDesc:"Coordination devis entreprises partenaires · Chiffrage · Planning · Sans responsabilité technique ni décennale", type:"amo" });
+        pdfDesc:"Honoraires basés sur un budget travaux estimé à "+fmt(budget)+" (taux "+(taux===0.03?"3%":"4%")+") · Coordination devis entreprises partenaires · Chiffrage · Planning · Sans responsabilité technique ni décennale", type:"amo" });
     } else {
       document.getElementById("amo-calc").style.display = "none";
     }
