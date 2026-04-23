@@ -360,19 +360,22 @@ select.form-input { cursor: pointer; }
 
   .print-header {
     display: flex; justify-content: space-between; align-items: flex-start;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
     border-bottom: 2px solid #B8963E;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.7rem;
   }
+  .print-header-left { flex: 1; padding-top: 0; }
+  .print-header-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
   .print-logo {
-    width: 80px; height: 80px;
+    width: 60px; height: 60px;
     object-fit: contain;
     background: transparent;
     border-radius: 0;
     padding: 0;
+    margin-top: 4px;
   }
-  .print-company { font-size: 7.5pt; color: #555; line-height: 1.55; margin-top: 0.4rem; }
-  .print-devis-title { font-family: 'Cormorant Garamond', serif; font-size: 22pt; font-weight: 600; color: #B8963E; text-align: right; }
+  .print-company { font-size: 7.5pt; color: #555; line-height: 1.5; margin-top: 0; }
+  .print-devis-title { font-family: 'Cormorant Garamond', serif; font-size: 22pt; font-weight: 600; color: #B8963E; text-align: right; line-height: 1; margin: 0; }
   .print-devis-meta { font-size: 7.5pt; color: #555; text-align: right; margin-top: 3px; line-height: 1.6; }
 
   .print-client-block {
@@ -1608,8 +1611,7 @@ function handlePrint() {
   // Page 1 : Devis
   let p1 = `<div class="print-page1">
     <div class="print-header">
-      <div>
-        <img class="print-logo" src="${LOGO_B64}" alt="RC Design">
+      <div class="print-header-left">
         <div class="print-company">
           <strong style="font-size:8pt;color:#B8963E;font-family:\'Cormorant Garamond\',serif;font-weight:600">RC DESIGN INTÉRIEUR</strong><br>
           Cabinet d\'étude en architecture d\'intérieur &amp; design d\'espace<br>
@@ -1620,9 +1622,10 @@ function handlePrint() {
           SIRET : ${SOCIETE.siret}
         </div>
       </div>
-      <div>
+      <div class="print-header-right">
         <div class="print-devis-title">DEVIS</div>
         <div class="print-devis-meta">N° ${devisNum}<br>${dateStr}</div>
+        <img class="print-logo" src="${LOGO_B64}" alt="RC Design">
       </div>
     </div>`;
 
