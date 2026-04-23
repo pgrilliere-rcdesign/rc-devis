@@ -1304,9 +1304,10 @@ function computeLines() {
           const detail = (document.getElementById("proj-autre-detail")||{}).value||"";
           if (detail.trim()) label = "Projection 3D — "+detail.trim();
         }
+        const detailProj = qty+" visuel"+(qty>1?"s":"")+" × 490 €"+(remise3D>0?" · Remise multi-visuels −"+(remise3D*100)+"%":"");
         lines.push({ id:p.key, label:label, price:net, qty,
           note:remise3D>0?"490 € × "+qty+" · Remise multi-visuels −"+(remise3D*100)+"%":"490 € × "+qty,
-          pdfDesc:"Visuel photoréaliste haute définition · Fichier HD livré sous 5–7 jours", type:"proj3d" });
+          pdfDesc:detailProj+" · Visuel photoréaliste haute définition · Fichier HD livré sous 5–7 jours", type:"proj3d" });
       }
     });
     // update counter totals
@@ -1342,9 +1343,10 @@ function computeLines() {
         const detail = (document.getElementById("cons-autre-detail")||{}).value||"";
         if (detail.trim()) label = "Conseils Ameublement — "+detail.trim();
       }
+      const detailCons = qty+" pièce"+(qty>1?"s":"")+" × 490 €"+(remiseCons>0?" · Remise multi-pièces −"+(remiseCons*100)+"%":"");
       lines.push({ id:p.key, label:label, price:net, qty,
         note:remiseCons>0?"490 € × "+qty+" · Remise multi-pièces −"+(remiseCons*100)+"%":"490 € × "+qty,
-        pdfDesc:"Sélection mobilier & accessoires · Planche d'ambiance · Recommandations fournisseurs", type:"conseil-ameublement" });
+        pdfDesc:detailCons+" · Sélection mobilier & accessoires · Planche d'ambiance · Recommandations fournisseurs", type:"conseil-ameublement" });
     }
   });
   consItems.forEach(p => {
@@ -1393,9 +1395,10 @@ function computeLines() {
   // Service de Conseils
   const sessions = state.counters["sessions-conseils"]||0;
   if (sessions>0) {
+    const detailSess = sessions+" session"+(sessions>1?"s":"")+" × 300 €";
     lines.push({ id:"sessions", label:"Service de Conseils — "+sessions+" session"+(sessions>1?"s":""), price:300*sessions,
       qty:sessions, note:"300 € × "+sessions+" session"+(sessions>1?"s":""),
-      pdfDesc:"Session de conseil personnalisé · 2 heures · En présentiel ou visio · Antibes / Côte d'Azur", type:"conseils" });
+      pdfDesc:detailSess+" · Session de conseil personnalisé · 2 heures · En présentiel ou visio · Antibes / Côte d'Azur", type:"conseils" });
   }
   const el = document.getElementById("sessions-conseils-total");
   if (el) el.textContent = sessions>0?fmt(300*sessions):"";
