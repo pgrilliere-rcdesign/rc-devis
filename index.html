@@ -607,11 +607,13 @@ select.form-input { cursor: pointer; }
               <label class="form-label">Formule</label>
               <select class="form-input" id="formule-prop" onchange="renderRecap()">
                 <option value="">Sélectionner la surface du bien…</option>
-                <option value="studio">Studio / T2 (20–40 m²) — 990 €</option>
-                <option value="t3t4">T3 / T4 (60–100 m²) — 1 490 €</option>
-                <option value="duplex">Appartement / Duplex (100–150 m²) — 1 890 €</option>
-                <option value="villa">Villa (150–250 m²) — 2 490 €</option>
-                <option value="prestige">Villa Prestige (> 250 m²) — 2 990 €</option>
+                <option value="t2a">T2 (20–30 m²) — 990 €</option>
+                <option value="t2b">T2 (30–55 m²) — 1 290 €</option>
+                <option value="t3">T3 (55–75 m²) — 1 490 €</option>
+                <option value="t4">T4 (75–105 m²) — 1 690 €</option>
+                <option value="duplex">Appartement / Duplex (105–155 m²) — 1 890 €</option>
+                <option value="villa">Villa (155–255 m²) — 2 490 €</option>
+                <option value="prestige">Villa Prestige (> 255 m²) — 2 990 €</option>
               </select>
             </div>
             <div class="checkbox-row" style="margin-top:0.6rem">
@@ -619,6 +621,13 @@ select.form-input { cursor: pointer; }
               <div class="checkbox-label">
                 <strong>Élévation 3D SketchUp</strong>
                 <span>Fichier .SKP exploitable · +30% du tarif de base</span>
+              </div>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="elec" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Plan Électricité</strong>
+                <span>Plan 2D avec implantation électrique · +30% du tarif de base</span>
               </div>
             </div>
             <div class="checkbox-row">
@@ -647,6 +656,13 @@ select.form-input { cursor: pointer; }
               <div class="checkbox-label">
                 <strong>Élévation 3D SketchUp</strong>
                 <span>Fichier .SKP exploitable · +30% du tarif de base</span>
+              </div>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="elec-prof" onchange="renderRecap()">
+              <div class="checkbox-label">
+                <strong>Plan Électricité</strong>
+                <span>Plan 2D avec implantation électrique · +30% du tarif de base</span>
               </div>
             </div>
             <div class="checkbox-row">
@@ -1061,8 +1077,18 @@ const LOGO_B64 = 'data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BS
 const PASSWORD = "rcdesign2026";
 
 const TARIFS_PROP = {
-  studio:   { label: "Studio / T2 (20–40 m²)",           price: 990 },
-  t3t4:     { label: "T3 / T4 (60–100 m²)",              price: 1490 },
+  t2a:      { label: "T2 (20–30 m²)",                     price: 990 },
+  t2b:      { label: "T2 (30–55 m²)",                     price: 1290 },
+  t3:       { label: "T3 (55–75 m²)",                     price: 1490 },
+  t4:       { label: "T4 (75–105 m²)",                    price: 1690 },
+  duplex:   { label: "Appartement / Duplex (105–155 m²)", price: 1890 },
+  villa:    { label: "Villa (155–255 m²)",                price: 2490 },
+  prestige: { label: "Villa Prestige (> 255 m²)",         price: 2990 },
+};
+// Grille agences immobilières — inchangée, indépendante de TARIFS_PROP
+const TARIFS_AGENCE = {
+  studio:   { label: "Studio / T2 (20–40 m²)",            price: 990 },
+  t3t4:     { label: "T3 / T4 (60–100 m²)",               price: 1490 },
   duplex:   { label: "Appartement / Duplex (100–150 m²)", price: 1890 },
   villa:    { label: "Villa (150–250 m²)",                price: 2490 },
   prestige: { label: "Villa Prestige (> 250 m²)",         price: 2990 },
@@ -1225,6 +1251,9 @@ function computeLines() {
         if (document.getElementById("sketchup").checked)
           lines.push({ id:"sketchup", label:"Élévation 3D SketchUp", price:Math.round(f.price*0.30),
             pdfDesc:"Modèle 3D volumétrique issu du relevé Leica · Fichier .SKP compatible SketchUp · Cotes et volumes intégrés", type:"sketchup" });
+        if (document.getElementById("elec").checked)
+          lines.push({ id:"elec", label:"Plan Électricité", price:Math.round(f.price*0.30),
+            pdfDesc:"Plan 2D coté avec implantation électrique · Prises · Interrupteurs · Points lumineux · Tableau · Fichier PDF", type:"elec" });
         if (document.getElementById("express").checked)
           lines.push({ id:"express", label:"Option Express — Délai 2 jours", price:Math.round(f.price*0.30),
             pdfDesc:"+30% du tarif de base", type:"express" });
@@ -1239,6 +1268,9 @@ function computeLines() {
         if (document.getElementById("sketchup-prof").checked)
           lines.push({ id:"sketchup", label:"Élévation 3D SketchUp", price:Math.round(f.price*0.30),
             pdfDesc:"Modèle 3D volumétrique issu du relevé Leica · Fichier .SKP compatible SketchUp · Cotes et volumes intégrés", type:"sketchup" });
+        if (document.getElementById("elec-prof").checked)
+          lines.push({ id:"elec", label:"Plan Électricité", price:Math.round(f.price*0.30),
+            pdfDesc:"Plan 2D coté avec implantation électrique · Prises · Interrupteurs · Points lumineux · Tableau · Fichier PDF", type:"elec" });
         if (document.getElementById("express-prof").checked)
           lines.push({ id:"express", label:"Option Express — Délai 2 jours", price:Math.round(f.price*0.30),
             pdfDesc:"+30% du tarif de base", type:"express" });
@@ -1246,8 +1278,8 @@ function computeLines() {
     }
     if (state.typeClient === "agence" && state.agenceFormule) {
       const v = document.getElementById("formule-agence-bien").value;
-      if (v && TARIFS_PROP[v]) {
-        const f = TARIFS_PROP[v];
+      if (v && TARIFS_AGENCE[v]) {
+        const f = TARIFS_AGENCE[v];
         const remisePct = state.agenceFormule==="essai"?10:state.agenceFormule==="partenaire"?15:20;
         const label = state.agenceFormule==="essai"?"Essai −10%":state.agenceFormule==="partenaire"?"Partenaire −15%":"Premium −20%";
         const prixNet = Math.round(f.price*(1-remisePct/100));
@@ -1480,6 +1512,8 @@ function resetDevis() {
   document.getElementById("formule-agence-bien").value = "";
   document.getElementById("sketchup").checked = false;
   document.getElementById("sketchup-prof").checked = false;
+  document.getElementById("elec").checked = false;
+  document.getElementById("elec-prof").checked = false;
   document.getElementById("express").checked = false;
   document.getElementById("express-prof").checked = false;
   ["pack-ext","scan-ext","jardin","jardin-etendu","piscine","analyse-fourn","analyse-tce","amo-active"].forEach(id => {
@@ -1538,6 +1572,11 @@ const FICHES_DATA = {
     title:"Élévation 3D SketchUp",
     desc:"En complément du relevé Leica BLK360 G2, RC Design Intérieur livre le modèle 3D volumétrique de votre bien sous forme de fichier SketchUp (.SKP) directement exploitable. Sans ressaisie, sans perte de précision, vos architectes, décorateurs ou entreprises partenaires disposent d'une base de travail immédiatement opérationnelle.",
     includes:["Modèle 3D volumétrique issu du relevé Leica BLK360 G2","Fichier .SKP compatible SketchUp (toutes versions)","Cotes, volumes et hauteurs sous plafond intégrés","Prêt à l'emploi pour architectes, décorateurs et prestataires","Transmis en complément des plans 2D cotés PDF"]
+  },
+  elec: {
+    title:"Plan Électricité",
+    desc:"En complément du relevé, RC Design Intérieur établit un plan 2D coté intégrant l\'implantation électrique complète de votre bien. Ce document permet aux électriciens de chiffrer précisément leur intervention et vous garantit une répartition des points d\'alimentation cohérente avec l\'usage réel de chaque pièce.",
+    includes:["Plan 2D coté issu du relevé Leica BLK360 G2","Implantation des prises et interrupteurs","Positionnement des points lumineux","Emplacement du tableau électrique et des circuits","Document PDF exploitable par vos électriciens"]
   },
   express: {
     title:"Option Express — Livraison 48h",
