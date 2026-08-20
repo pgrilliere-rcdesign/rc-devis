@@ -349,7 +349,7 @@ select.form-input { cursor: pointer; }
 
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
-  body { background: white; font-size: 9pt; }
+  body { background: white; font-size: 11pt; }
 
   #login-screen, .app-header, .form-col, .recap-col, .recap-actions { display: none !important; }
 
@@ -360,87 +360,129 @@ select.form-input { cursor: pointer; }
 
   .print-header {
     display: flex; justify-content: space-between; align-items: flex-start;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #B8963E;
-    margin-bottom: 0.7rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2.5px solid #B8963E;
+    margin-bottom: 0.85rem;
   }
   .print-header-left { flex: 1; padding-top: 0; }
   .print-header-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
   .print-logo {
-    width: 60px; height: 60px;
+    width: 78px; height: 78px;
     object-fit: contain;
     background: transparent;
     border-radius: 0;
     padding: 0;
-    margin-top: 4px;
+    margin-top: 6px;
   }
-  .print-company { font-size: 7.5pt; color: #555; line-height: 1.5; margin-top: 0; }
-  .print-devis-title { font-family: 'Cormorant Garamond', serif; font-size: 22pt; font-weight: 600; color: #B8963E; text-align: right; line-height: 1; margin: 0; }
-  .print-devis-meta { font-size: 7.5pt; color: #555; text-align: right; margin-top: 3px; line-height: 1.6; }
+  .print-company { font-size: 9.5pt; color: #4a4a4a; line-height: 1.65; margin-top: 0; }
+  .print-company-name { font-size: 12pt !important; color: #B8963E; font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: 0.02em; }
+  .print-devis-title { font-family: 'Cormorant Garamond', serif; font-size: 28pt; font-weight: 600; color: #B8963E; text-align: right; line-height: 1; margin: 0; }
+  .print-devis-meta { font-size: 9.5pt; color: #4a4a4a; text-align: right; margin-top: 6px; line-height: 1.65; }
 
   .print-client-block {
-    margin-bottom: 0.9rem;
-    padding: 0.5rem 0.85rem;
+    margin-bottom: 0.7rem;
+    padding: 0.6rem 1.1rem;
     background: #FAF8F5 !important;
-    border-left: 3px solid #B8963E;
+    border-left: 4px solid #B8963E;
     border-radius: 0 4px 4px 0;
   }
-  .print-client-tag { font-size: 6.5pt; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 3px; }
-  .print-client-name { font-weight: 700; font-size: 9.5pt; }
-  .print-client-detail { font-size: 7.5pt; color: #555; margin-top: 2px; }
+  .print-client-tag { font-size: 8pt; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 5px; }
+  .print-client-name { font-weight: 700; font-size: 13pt; letter-spacing: 0.01em; }
+  .print-client-detail { font-size: 10pt; color: #4a4a4a; margin-top: 4px; line-height: 1.5; }
 
-  .print-table { width: 100%; border-collapse: collapse; margin-bottom: 0.75rem; }
+  .print-table { width: 100%; border-collapse: collapse; margin-bottom: 0.65rem; }
   .print-table thead tr { background: #2C2C2C !important; color: white !important; }
-  .print-table th { padding: 0.45rem 0.65rem; font-size: 6.5pt; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; text-align: left; }
-  .print-table th:last-child { text-align: right; width: 90px; }
+  .print-table th { padding: 0.6rem 0.9rem; font-size: 8.5pt; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; text-align: left; }
+  .print-table th:last-child { text-align: right; width: 130px; white-space: nowrap; }
   .print-table tbody tr:nth-child(even) { background: #FAF8F5 !important; }
   .print-table tbody tr:nth-child(odd) { background: white !important; }
-  .print-table td { padding: 0.4rem 0.65rem; border-bottom: 1px solid #EEE; vertical-align: top; }
-  .print-td-label { font-weight: 700; font-size: 8pt; }
-  .print-td-desc { font-size: 7pt; color: #888; margin-top: 2px; font-style: italic; }
-  .print-td-price { text-align: right; font-weight: 700; font-size: 8.5pt; color: #B8963E; white-space: nowrap; }
+  .print-table td { padding: 0.5rem 0.9rem; border-bottom: 1px solid #E8E8E8; vertical-align: top; }
+  .print-td-label { font-weight: 700; font-size: 11pt; line-height: 1.35; }
+  .print-td-desc { font-size: 9pt; color: #777; margin-top: 4px; font-style: italic; line-height: 1.5; }
+  .print-td-price { text-align: right; font-weight: 700; font-size: 11.5pt; color: #B8963E; white-space: nowrap; }
 
-  .print-total-wrap { display: flex; justify-content: flex-end; margin-bottom: 0.75rem; }
-  .print-total-inner { min-width: 220px; }
+  .print-total-wrap { display: flex; justify-content: flex-end; margin-bottom: 0.65rem; }
+  .print-total-inner { min-width: 290px; }
   .print-subtotal-row, .print-remise-row {
     display: flex; justify-content: space-between;
-    padding: 0.25rem 0; font-size: 7.5pt; color: #555;
+    padding: 0.35rem 0.2rem; font-size: 10pt; color: #4a4a4a;
   }
   .print-remise-row { color: #C0392B; }
   .print-total-row {
     display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.5rem 0.75rem;
+    padding: 0.6rem 1rem;
     background: #2C2C2C !important; color: white !important;
-    border-radius: 4px; margin-top: 4px;
+    border-radius: 4px; margin-top: 5px;
   }
-  .print-total-label { font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; }
-  .print-total-amount { font-family: 'Cormorant Garamond', serif; font-size: 14pt; font-weight: 700; color: #D4A843 !important; }
-  .print-tva { font-size: 6.5pt; color: #888; text-align: right; margin-top: 3px; }
+  .print-total-label { font-family: 'Cormorant Garamond', serif; font-size: 13.5pt; font-weight: 600; }
+  .print-total-amount { font-family: 'Cormorant Garamond', serif; font-size: 19pt; font-weight: 700; color: #D4A843 !important; }
+  .print-tva { font-size: 8.5pt; color: #888; text-align: right; margin-top: 6px; }
 
   .print-notes-box {
-    margin-bottom: 0.6rem; padding: 0.45rem 0.65rem;
-    background: #FAF8F5 !important; border: 1px solid #EEE; border-radius: 4px;
+    margin-bottom: 0.9rem; padding: 0.7rem 0.9rem;
+    background: #FAF8F5 !important; border: 1px solid #E8E8E8; border-radius: 4px;
   }
-  .print-notes-tag { font-size: 6pt; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 3px; }
-  .print-notes-text { font-size: 7.5pt; color: #555; }
+  .print-notes-tag { font-size: 8pt; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 5px; }
+  .print-notes-text { font-size: 10pt; color: #4a4a4a; line-height: 1.55; }
 
   .print-legal {
-    border-top: 1px solid #EEE; padding-top: 0.6rem;
-    font-size: 6.5pt; color: #888; line-height: 1.55;
+    border-top: 1px solid #E8E8E8; padding-top: 0.6rem;
+    font-size: 8pt; color: #777; line-height: 1.55;
   }
+  .print-legal p { margin-bottom: 5px; }
+
+  /* ── Page 1 : variante compacte (devis longs) ── */
+  .print-page1.dense .print-logo { width: 74px; height: 74px; margin-top: 5px; }
+  .print-page1.dense .print-company { font-size: 8.5pt; line-height: 1.5; }
+  .print-page1.dense .print-company-name { font-size: 10.5pt !important; }
+  .print-page1.dense .print-devis-title { font-size: 24pt; }
+  .print-page1.dense .print-devis-meta { font-size: 8.5pt; }
+  .print-page1.dense .print-client-block { padding: 0.55rem 0.9rem; margin-bottom: 0.8rem; }
+  .print-page1.dense .print-client-name { font-size: 11.5pt; }
+  .print-page1.dense .print-client-detail { font-size: 9pt; }
+  .print-page1.dense .print-table td { padding: 0.45rem 0.8rem; }
+  .print-page1.dense .print-td-label { font-size: 9.5pt; }
+  .print-page1.dense .print-td-desc { font-size: 8pt; margin-top: 3px; line-height: 1.45; }
+  .print-page1.dense .print-td-price { font-size: 10pt; }
+  .print-page1.dense .print-total-label { font-size: 12pt; }
+  .print-page1.dense .print-total-amount { font-size: 16.5pt; }
+  .print-page1.dense .print-legal { font-size: 7.5pt; line-height: 1.55; padding-top: 0.6rem; }
+
+  /* ── Page 1 : variante très compacte (devis très longs) ── */
+  .print-page1.ultra .print-logo { width: 62px; height: 62px; margin-top: 4px; }
+  .print-page1.ultra .print-company { font-size: 7.5pt; line-height: 1.45; }
+  .print-page1.ultra .print-company-name { font-size: 9.5pt !important; }
+  .print-page1.ultra .print-devis-title { font-size: 21pt; }
+  .print-page1.ultra .print-devis-meta { font-size: 7.5pt; margin-top: 3px; }
+  .print-page1.ultra .print-header { padding-bottom: 0.4rem; margin-bottom: 0.6rem; }
+  .print-page1.ultra .print-client-block { padding: 0.45rem 0.85rem; margin-bottom: 0.6rem; }
+  .print-page1.ultra .print-client-name { font-size: 10.5pt; }
+  .print-page1.ultra .print-client-detail { font-size: 8pt; margin-top: 2px; }
+  .print-page1.ultra .print-client-tag { font-size: 7pt; margin-bottom: 3px; }
+  .print-page1.ultra .print-table th { padding: 0.4rem 0.8rem; font-size: 7.5pt; }
+  .print-page1.ultra .print-table td { padding: 0.32rem 0.8rem; }
+  .print-page1.ultra .print-td-label { font-size: 8.5pt; line-height: 1.25; }
+  .print-page1.ultra .print-td-desc { font-size: 7.2pt; margin-top: 2px; line-height: 1.35; }
+  .print-page1.ultra .print-td-price { font-size: 9pt; }
+  .print-page1.ultra .print-subtotal-row, .print-page1.ultra .print-remise-row { font-size: 8.5pt; padding: 0.22rem 0.2rem; }
+  .print-page1.ultra .print-total-row { padding: 0.45rem 0.9rem; }
+  .print-page1.ultra .print-total-label { font-size: 11pt; }
+  .print-page1.ultra .print-total-amount { font-size: 15pt; }
+  .print-page1.ultra .print-tva { font-size: 7.5pt; margin-top: 4px; }
+  .print-page1.ultra .print-legal { font-size: 7pt; line-height: 1.45; padding-top: 0.45rem; }
 
   /* ── Page 2 : Fiches descriptives ── */
   .print-page2 { }
   .print-page2-header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-bottom: 0.5rem; border-bottom: 2px solid #B8963E;
-    margin-bottom: 1rem;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding-bottom: 0.7rem; border-bottom: 2.5px solid #B8963E;
+    margin-bottom: 1.4rem;
   }
-  .print-page2-title { font-family: 'Cormorant Garamond', serif; font-size: 16pt; font-weight: 600; color: #2C2C2C; }
-  .print-page2-sub { font-size: 7.5pt; color: #888; margin-top: 2px; }
-  .print-page2-devis { font-size: 7.5pt; color: #888; text-align: right; }
+  .print-page2-title { font-family: 'Cormorant Garamond', serif; font-size: 21pt; font-weight: 600; color: #2C2C2C; line-height: 1.1; }
+  .print-page2-sub { font-size: 9pt; color: #888; margin-top: 5px; }
+  .print-page2-devis { font-size: 9pt; color: #888; text-align: right; line-height: 1.6; }
 
-  .fiches-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .fiches-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
   .fiche {
     border: 1px solid #E0D8C8;
     border-radius: 5px;
@@ -449,18 +491,27 @@ select.form-input { cursor: pointer; }
   }
   .fiche-header {
     background: #2C2C2C !important; color: white !important;
-    padding: 0.45rem 0.7rem;
+    padding: 0.65rem 0.95rem;
     display: flex; align-items: center; gap: 0.5rem;
   }
-  .fiche-title { font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; flex: 1; }
-  .fiche-price { font-size: 8pt; color: #D4A843 !important; font-weight: 700; white-space: nowrap; }
-  .fiche-body { padding: 0.55rem 0.7rem; background: white !important; }
-  .fiche-desc { font-size: 7.5pt; color: #555; line-height: 1.55; margin-bottom: 0.4rem; }
+  .fiche-title { font-family: 'Cormorant Garamond', serif; font-size: 13pt; font-weight: 600; flex: 1; line-height: 1.2; }
+  .fiche-price { font-size: 10pt; color: #D4A843 !important; font-weight: 700; white-space: nowrap; }
+  .fiche-body { padding: 0.85rem 0.95rem; background: white !important; }
+  .fiche-desc { font-size: 9.5pt; color: #4a4a4a; line-height: 1.7; margin-bottom: 0.75rem; }
   .fiche-includes { list-style: none; }
-  .fiche-includes li { font-size: 7pt; color: #444; padding: 0.18rem 0; border-bottom: 1px solid #F5F5F5; display: flex; gap: 0.4rem; }
-  .fiche-includes li::before { content: "→"; color: #B8963E; flex-shrink: 0; font-weight: 700; }
+  .fiche-includes li { font-size: 9pt; color: #3a3a3a; padding: 0.32rem 0; border-bottom: 1px solid #F2F2F2; display: flex; gap: 0.5rem; line-height: 1.5; }
+  .fiche-includes li::before { content: "\2192"; color: #B8963E; flex-shrink: 0; font-weight: 700; }
   .fiche-includes li:last-child { border-bottom: none; }
-  .fiche-duration { font-size: 6.5pt; color: #B8963E; font-weight: 700; margin-top: 0.4rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .fiche-duration { font-size: 8.5pt; color: #B8963E; font-weight: 700; margin-top: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* ── Page 2 : variante compacte (nombreuses fiches) ── */
+  .print-page2.dense .fiches-grid { gap: 0.8rem; }
+  .print-page2.dense .fiche-header { padding: 0.5rem 0.8rem; }
+  .print-page2.dense .fiche-title { font-size: 11pt; }
+  .print-page2.dense .fiche-body { padding: 0.65rem 0.8rem; }
+  .print-page2.dense .fiche-desc { font-size: 8.5pt; line-height: 1.55; margin-bottom: 0.5rem; }
+  .print-page2.dense .fiche-includes li { font-size: 8pt; padding: 0.22rem 0; line-height: 1.4; }
+  .print-page2.dense .fiche-duration { font-size: 7.5pt; margin-top: 0.5rem; }
 }
 
 #print-area { display: none; }
@@ -1651,11 +1702,14 @@ function handlePrint() {
   const dateStr = devisDate ? new Date(devisDate).toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"}) : "";
 
   // Page 1 : Devis
-  let p1 = `<div class="print-page1">
+  // Densité adaptative : on resserre progressivement pour tenir sur une seule page
+  const denseP1 = lines.length > 10 ? " dense ultra" : lines.length > 7 ? " dense" : "";
+
+  let p1 = `<div class="print-page1${denseP1}">
     <div class="print-header">
       <div class="print-header-left">
         <div class="print-company">
-          <strong style="font-size:8pt;color:#B8963E;font-family:\'Cormorant Garamond\',serif;font-weight:600">RC DESIGN INTÉRIEUR</strong><br>
+          <span class="print-company-name">RC DESIGN INTÉRIEUR</span><br>
           Cabinet d\'étude en architecture d\'intérieur &amp; design d\'espace<br>
           Mme RAGOT Charlotte<br>
           ${SOCIETE.adresse}<br>
@@ -1785,7 +1839,10 @@ function handlePrint() {
     </div>`;
   });
 
-  let p2 = `<div class="print-page2">
+  // Densité adaptative : au-delà de 4 fiches, on resserre pour tenir sur une page
+  const denseP2 = ficheTypes.length > 4 ? " dense" : "";
+
+  let p2 = `<div class="print-page2${denseP2}">
     <div class="print-page2-header">
       <div>
         <div class="print-page2-title">Détail des prestations</div>
